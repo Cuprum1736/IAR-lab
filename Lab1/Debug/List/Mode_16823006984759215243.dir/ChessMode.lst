@@ -1,0 +1,267 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.50.2.385/W64 for ARM         28/Nov/2025  22:44:16
+# Copyright 1999-2024 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Mode\ChessMode.cpp
+#    Command line                 =
+#        -f "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@
+#        @@@@@@@@@@@ @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Debug\Obj\Mode_16823006984759215243.dir\ChessMode.o.rsp"
+#        ("D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@
+#        @@@@@@@@@@@ @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Application\Mode\ChessMode.cpp" -lC "D:\@@@@@@@
+#        @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Debug\List\Mode_16823006984759215243.dir" -lA
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Debug\List\Mode_16823006984759215243.dir" -o
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Debug\Obj\Mode_16823006984759215243.dir" --no_cse
+#        --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering
+#        --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e
+#        --fpu=VFPv4_sp --dlib_config
+#        E:\IAR_Embedded_Workbench_for_ARM\arm\inc\c\DLib_Config_Normal.h -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Common\\" -I "D:\@@@@@@@
+#        @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\AHardware\Registers\STM32F411\FieldValues\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\AHardware\Registers\STM32F411\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\AHardware\Registers\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\AHardware\Registers\CortexM4\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\AHardware\Registers\CortexM4\FieldValues\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Led\Contracts\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Led\\" -I "D:\@@@@@@@
+#        @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Mode\Contracts\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Button\\" -I "D:\@@@@@@@
+#        @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Button\Contrats\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\LcdController\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Application\LcdController\Contracts\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Mode\\" -On --c++
+#        --no_exceptions --no_rtti) --dependencies=n "D:\@@@@@@@
+#        @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Debug\Obj\Mode_16823006984759215243.dir\ChessMode.o.iar_deps"
+#    Locale                       =  C
+#    List file                    =
+#        D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Debug\List\Mode_16823006984759215243.dir\ChessMode.lst
+#    Object file                  =
+#        D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Debug\Obj\Mode_16823006984759215243.dir\ChessMode.o
+#    Runtime model:                  
+#      __CPP_Exceptions           =  Disabled
+#      __CPP_Language             =  C++14
+#      __CPP_Library              =  DLib
+#      __CPP_Runtime              =  1
+#      __SystemLibrary            =  DLib
+#      __dlib_file_descriptor     =  0
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@ @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Mode\ChessMode.cpp
+      1          #include <cstdint>
+Warning[Ms014]: some characters could not be correctly encoded in "D:\@@@@@@@
+          @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+          @@@@@@@@@@@@@
+          @@@@@@@@@\lab2\Lab1\Debug\List\Mode_16823006984759215243.dir\ChessMo
+          de.s", and have been replaced with '@'. The first such character has
+          unicode code point 0x420 ("@")
+      2          #include "ChessMode.h"
+
+   \                                 In section .text, align 2
+   \   __vfp auto std::size<tLeds>(tLeds const &)->size_t
+   \                     _ZSt4sizeISt5arrayIP12ILedToggableLj4EEEDTcldtfp_4sizeEERKT_: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZNKSt5arrayIP12ILedToggableLj4EE4sizeEv
+   \        0xA   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp size_t std::array<ILedToggable *, 4U>::size() const noexcept
+   \                     _ZNKSt5arrayIP12ILedToggableLj4EE4sizeEv: (+1)
+   \        0x0   0x0001             MOVS     R1,R0
+   \        0x2   0x2004             MOVS     R0,#+4
+   \        0x4   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp ILedOnOff *const & std::array<ILedOnOff *, 4U>::operator[](size_t) const
+   \                     _ZNKSt5arrayIP9ILedOnOffLj4EEixEj: (+1)
+   \        0x0   0xEB00 0x0081      ADD      R0,R0,R1, LSL #+2
+   \        0x4   0x4770             BX       LR
+
+   \                                 In section .text, align 2, keep-with-next
+   \   __vfp ChessMode::subobject ChessMode(tLeds const &, tLedsOnOff const &)
+   \                     _ZN9ChessModeC2ERKSt5arrayIP12ILedToggableLj4EERKS0_IP9ILedOnOffLj4EE: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN9ChessModeC1ERKSt5arrayIP12ILedToggableLj4EERKS0_IP9ILedOnOffLj4EE
+   \        0xA   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2, keep-with-next
+      3            ChessMode::ChessMode(const tLeds& leds, const tLedsOnOff& ledsOnOff):
+      4          CommonMode(leds, ledsOnOff)
+      5              {
+   \                     _ZN9ChessModeC1ERKSt5arrayIP12ILedToggableLj4EERKS0_IP9ILedOnOffLj4EE: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0016             MOVS     R6,R2
+   \        0x8   0x0032             MOVS     R2,R6
+   \        0xA   0x0029             MOVS     R1,R5
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0x.... 0x....      BL       _ZN10CommonModeC2ERKSt5arrayIP12ILedToggableLj4EERKS0_IP9ILedOnOffLj4EE
+   \       0x12   0x....             LDR.N    R0,??DataTable1
+   \       0x14   0x6020             STR      R0,[R4, #+0]
+   \       0x16   0x2000             MOVS     R0,#+0
+   \       0x18   0x7420             STRB     R0,[R4, #+16]
+      6                
+      7              }
+   \       0x1A   0x0020             MOVS     R0,R4
+   \       0x1C   0xBD70             POP      {R4-R6,PC}
+      8              
+      9          /*    void ChessMode::Execute()
+     10              {
+     11                for(auto it: mLeds)
+     12                {
+     13                  mLeds[mCurrentLedNumber++]->Toggle();
+     14                  if (mCurrentLedNumber == std::size(mLeds))
+     15                  {
+     16                    mCurrentLedNumber = 0;
+     17                  }
+     18                }
+     19              }
+     20          */
+
+   \                                 In section .text, align 2, keep-with-next
+     21          void ChessMode::Execute()
+     22          {
+   \                     _ZN9ChessMode7ExecuteEv: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+     23              // Чётные и нечётные позиции
+     24              for (std::size_t i = 0; i < std::size(mLeds); ++i)
+   \        0x4   0x2500             MOVS     R5,#+0
+   \                     ??Execute_0: (+1)
+   \        0x6   0x6860             LDR      R0,[R4, #+4]
+   \        0x8   0x.... 0x....      BL       _ZSt4sizeISt5arrayIP12ILedToggableLj4EEEDTcldtfp_4sizeEERKT_
+   \        0xC   0x4285             CMP      R5,R0
+   \        0xE   0xD21A             BCS.N    ??Execute_1
+     25              {
+     26                  if ((i % 2 == 0) == oddPhase)
+   \       0x10   0xF015 0x0101      ANDS     R1,R5,#0x1
+   \       0x14   0xF091 0x0101      EORS     R1,R1,#0x1
+   \       0x18   0x7C20             LDRB     R0,[R4, #+16]
+   \       0x1A   0xB2C9             UXTB     R1,R1
+   \       0x1C   0x4281             CMP      R1,R0
+   \       0x1E   0xD108             BNE.N    ??Execute_2
+     27                      mLedsOnOff[i]->On();
+   \       0x20   0x0029             MOVS     R1,R5
+   \       0x22   0x68A0             LDR      R0,[R4, #+8]
+   \       0x24   0x.... 0x....      BL       _ZNKSt5arrayIP9ILedOnOffLj4EEixEj
+   \       0x28   0x6800             LDR      R0,[R0, #+0]
+   \       0x2A   0x6801             LDR      R1,[R0, #+0]
+   \       0x2C   0x6809             LDR      R1,[R1, #+0]
+   \       0x2E   0x4788             BLX      R1
+   \       0x30   0xE007             B.N      ??Execute_3
+     28                  else
+     29                      mLedsOnOff[i]->Off();
+   \                     ??Execute_2: (+1)
+   \       0x32   0x0029             MOVS     R1,R5
+   \       0x34   0x68A0             LDR      R0,[R4, #+8]
+   \       0x36   0x.... 0x....      BL       _ZNKSt5arrayIP9ILedOnOffLj4EEixEj
+   \       0x3A   0x6800             LDR      R0,[R0, #+0]
+   \       0x3C   0x6801             LDR      R1,[R0, #+0]
+   \       0x3E   0x6849             LDR      R1,[R1, #+4]
+   \       0x40   0x4788             BLX      R1
+     30              }
+   \                     ??Execute_3: (+1)
+   \       0x42   0x1C6D             ADDS     R5,R5,#+1
+   \       0x44   0xE7DF             B.N      ??Execute_0
+     31          
+     32              // Переключение фазы
+     33              oddPhase = !oddPhase;
+   \                     ??Execute_1: (+1)
+   \       0x46   0x7C20             LDRB     R0,[R4, #+16]
+   \       0x48   0x2800             CMP      R0,#+0
+   \       0x4A   0xD101             BNE.N    ??Execute_4
+   \       0x4C   0x2001             MOVS     R0,#+1
+   \       0x4E   0xE000             B.N      ??Execute_5
+   \                     ??Execute_4: (+1)
+   \       0x50   0x2000             MOVS     R0,#+0
+   \                     ??Execute_5: (+1)
+   \       0x52   0x7420             STRB     R0,[R4, #+16]
+     34          }
+   \       0x54   0xBD31             POP      {R0,R4,R5,PC}
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \        0x0   0x....'....        DC32     _ZTV9ChessMode+8
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      16   ChessMode::ChessMode(tLeds const &, tLedsOnOff const &)
+        16   -> CommonMode::subobject CommonMode(tLeds const &, tLedsOnOff const &)
+      16   ChessMode::Execute()
+        16   -- Indirect call
+        16   -> std::array<ILedOnOff *, 4U>::operator[](size_t) const
+        16   -> std::size<tLeds>(tLeds const &)->size_t
+       8   ChessMode::subobject ChessMode(tLeds const &, tLedsOnOff const &)
+         8   -> ChessMode::ChessMode(tLeds const &, tLedsOnOff const &)
+       0   std::array<ILedOnOff *, 4U>::operator[](size_t) const
+       0   std::array<ILedToggable *, 4U>::size() const noexcept
+       8   std::size<tLeds>(tLeds const &)->size_t
+         8   -> std::array<ILedToggable *, 4U>::size() const noexcept
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+      30  ChessMode::ChessMode(tLeds const &, tLedsOnOff const &)
+      86  ChessMode::Execute()
+      12  ChessMode::subobject ChessMode(tLeds const &, tLedsOnOff const &)
+       6  std::array<ILedOnOff *, 4U>::operator[](size_t) const
+       6  std::array<ILedToggable *, 4U>::size() const noexcept
+      12  std::size<tLeds>(tLeds const &)->size_t
+     100  -- Other
+
+ 
+ 100 bytes in section .rodata
+ 156 bytes in section .text
+ 
+ 132 bytes of CODE  memory (+  24 bytes shared)
+   0 bytes of CONST memory (+ 100 bytes shared)
+
+Errors: none
+Warnings: 1

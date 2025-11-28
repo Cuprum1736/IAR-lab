@@ -1,0 +1,15 @@
+{
+  "workspace": {
+    "path": "${workspaceFolder}\\test.eww"
+  },
+  "workspaces": {
+    "${workspaceFolder}\\test.eww": {
+      "configs": {
+        "${workspaceFolder}\\iarproject.ewp": "Debug"
+      },
+      "selected": {
+        "path": "${workspaceFolder}\\iarproject.ewp"
+      }
+    }
+  }
+}

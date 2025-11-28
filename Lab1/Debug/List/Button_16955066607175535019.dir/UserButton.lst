@@ -1,0 +1,196 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.50.2.385/W64 for ARM         28/Nov/2025  22:44:15
+# Copyright 1999-2024 IAR Systems AB.
+#
+#    Cpu mode           =  thumb
+#    Endian             =  little
+#    Source file        =
+#        D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Button\UserButton.cpp
+#    Command line       =
+#        -f "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@
+#        @@@@@@@@@@@ @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Debug\Obj\Button_16955066607175535019.dir\UserButton.o.rsp"
+#        ("D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@
+#        @@@@@@@@@@@ @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Application\Button\UserButton.cpp" -lC "D:\@@@@@@@
+#        @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Debug\List\Button_16955066607175535019.dir" -lA
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Debug\List\Button_16955066607175535019.dir" -o
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Debug\Obj\Button_16955066607175535019.dir"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config
+#        E:\IAR_Embedded_Workbench_for_ARM\arm\inc\c\DLib_Config_Normal.h -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Common\\" -I "D:\@@@@@@@
+#        @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\AHardware\Registers\STM32F411\FieldValues\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\AHardware\Registers\STM32F411\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\AHardware\Registers\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\AHardware\Registers\CortexM4\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\AHardware\Registers\CortexM4\FieldValues\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Led\Contracts\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Led\\" -I "D:\@@@@@@@
+#        @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Mode\Contracts\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Button\\" -I "D:\@@@@@@@
+#        @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Button\Contrats\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\LcdController\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Application\LcdController\Contracts\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Mode\\" -On --c++
+#        --no_exceptions --no_rtti) --dependencies=n "D:\@@@@@@@
+#        @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Debug\Obj\Button_16955066607175535019.dir\UserButton.o.iar_deps"
+#    Locale             =  C
+#    List file          =
+#        D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Debug\List\Button_16955066607175535019.dir\UserButton.lst
+#    Object file        =
+#        D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Debug\Obj\Button_16955066607175535019.dir\UserButton.o
+#    Runtime model:        
+#      __CPP_Exceptions =  Disabled
+#      __CPP_Language   =  C++14
+#      __CPP_Library    =  DLib
+#      __CPP_Runtime    =  1
+#      __SystemLibrary  =  DLib
+#      __dlib_version   =  6
+#
+###############################################################################
+
+D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@ @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Button\UserButton.cpp
+      1          #include "UserButton.h"
+Warning[Ms014]: some characters could not be correctly encoded in "D:\@@@@@@@
+          @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+          @@@@@@@@@@@@@
+          @@@@@@@@@\lab2\Lab1\Debug\List\Button_16955066607175535019.dir\UserB
+          utton.s", and have been replaced with '@'. The first such character
+          has unicode code point 0x420 ("@")
+
+   \                                 In section .text, align 2
+   \   __vfp IButton::subobject IButton() noexcept
+   \                     _ZN7IButtonC2Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN7IButtonC1Ev
+   \        0xA   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp IButton::IButton() noexcept
+   \                     _ZN7IButtonC1Ev: (+1)
+   \        0x0   0x4770             BX       LR
+      2          #include <cstdint>
+      3          
+
+   \                                 In section .text, align 2, keep-with-next
+   \   __vfp UserButton::subobject UserButton(uint32_t, uint32_t)
+   \                     _ZN10UserButtonC2Ejj: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN10UserButtonC1Ejj
+   \        0xA   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2, keep-with-next
+      4          UserButton::UserButton(std::uint32_t pinNum, std::uint32_t registerAddress)
+      5              : mPinNum(pinNum)
+      6              , mRegisterAddress(registerAddress)
+      7          {
+   \                     _ZN10UserButtonC1Ejj: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0016             MOVS     R6,R2
+   \        0x8   0x0020             MOVS     R0,R4
+   \        0xA   0x.... 0x....      BL       _ZN7IButtonC2Ev
+   \        0xE   0x....             LDR.N    R0,??DataTable1
+   \       0x10   0x6020             STR      R0,[R4, #+0]
+   \       0x12   0x6066             STR      R6,[R4, #+4]
+   \       0x14   0x60A5             STR      R5,[R4, #+8]
+      8            
+      9          }
+   \       0x16   0x0020             MOVS     R0,R4
+   \       0x18   0xBD70             POP      {R4-R6,PC}
+     10          
+
+   \                                 In section .text, align 2, keep-with-next
+     11          bool UserButton::WasPressed() const
+     12          {
+   \                     _ZNK10UserButton10WasPressedEv: (+1)
+   \        0x0   0x0001             MOVS     R1,R0
+     13              bool isButtonPressed = ((*reinterpret_cast<std::uint32_t*>(mRegisterAddress) & (1U << mPinNum)) == 0);
+   \        0x2   0x6848             LDR      R0,[R1, #+4]
+   \        0x4   0x6800             LDR      R0,[R0, #+0]
+   \        0x6   0x688A             LDR      R2,[R1, #+8]
+   \        0x8   0x40D0             LSRS     R0,R0,R2
+   \        0xA   0xF010 0x0001      ANDS     R0,R0,#0x1
+   \        0xE   0xF090 0x0001      EORS     R0,R0,#0x1
+     14              return isButtonPressed;
+   \       0x12   0xB2C0             UXTB     R0,R0
+   \       0x14   0x4770             BX       LR
+     15          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \        0x0   0x....'....        DC32     _ZTV10UserButton+8
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   IButton::IButton() noexcept
+       8   IButton::subobject IButton() noexcept
+         8   -> IButton::IButton() noexcept
+      16   UserButton::UserButton(uint32_t, uint32_t)
+        16   -> IButton::subobject IButton() noexcept
+       0   UserButton::WasPressed() const
+       8   UserButton::subobject UserButton(uint32_t, uint32_t)
+         8   -> UserButton::UserButton(uint32_t, uint32_t)
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       2  IButton::IButton() noexcept
+      12  IButton::subobject IButton() noexcept
+      26  UserButton::UserButton(uint32_t, uint32_t)
+      22  UserButton::WasPressed() const
+      12  UserButton::subobject UserButton(uint32_t, uint32_t)
+      60  -- Other
+
+ 
+ 60 bytes in section .rodata
+ 78 bytes in section .text
+ 
+ 64 bytes of CODE  memory (+ 14 bytes shared)
+  0 bytes of CONST memory (+ 60 bytes shared)
+
+Errors: none
+Warnings: 1

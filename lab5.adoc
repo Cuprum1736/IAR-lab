@@ -1,4 +1,3 @@
-= Лабораторная работа №5
 :toc: macro
 :toc-title: Оглавление
 
@@ -172,142 +171,142 @@ image::UML.jpg[]
 
 [source,cpp]
 ----
-include::Laba5\main.cpp[]
+include::Lab1\main.cpp[]
 ----
 
 === Расположение файлов
 
-image::laba5.png[]
+image::lab5.png[]
 
 === IButton.h
 
 [source,cpp]
 ----
-include::Laba5\\Application\\Button\\Contrats\\IButton.h[]
+include::Lab1\\Application\\Button\\Contrats\\IButton.h[]
 ----
 
 === UserButton.cpp
 
 [source,cpp]
 ----
-include::Laba5\\Application\\Button\\UserButton.cpp[]
+include::Lab1\\Application\\Button\\UserButton.cpp[]
 ----
 
 === UserButton.h
 
 [source,cpp]
 ----
-include::Laba5\\Application\\Button\\UserButton.h[]
+include::Lab1\\Application\\Button\\UserButton.h[]
 ----
 
 === IController.h
 
 [source,cpp]
 ----
-include::Laba5\Application\Led\Contracts\ILedOnOff.h[]
+include::Lab1\Application\Led\Contracts\ILedOnOff.h[]
 ----
 
 === ModeController.cpp
 
 [source,cpp]
 ----
-include::Laba5\\Application\\LcdController\\ModeController.cpp[]
+include::Lab1\\Application\\LcdController\\ModeController.cpp[]
 ----
 
 === ModeController.h
 
 [source,cpp]
 ----
-include::Laba5\\Application\\LcdController\\ModeController.h[]
+include::Lab1\\Application\\LcdController\\ModeController.h[]
 ----
 
 === ILedOnOff.h
 
 [source,cpp]
 ----
-include::Laba5\Application\Led\Contracts\ILedOnOff.h[]
+include::Lab1\Application\Led\Contracts\ILedOnOff.h[]
 ----
 
 === ILedToggable.h
 
 [source,cpp]
 ----
-include::Laba5\Application\Led\Contracts\ILedToggable.h[]
+include::Lab1\Application\Led\Contracts\ILedToggable.h[]
 ----
 
 === Led.cpp
 
 [source,cpp]
 ----
-include::Laba5\\Application\\Led\\Led.cpp[]
+include::Lab1\\Application\\Led\\Led.cpp[]
 ----
 
 === Led.h
 
 [source,cpp]
 ----
-include::Laba5\\Application\\Led\\Led.h[]
+include::Lab1\\Application\\Led\\Led.h[]
 ----
 
 === OptimizedLed.h
 
 [source,cpp]
 ----
-include::Laba5\\Application\\Led\\OptimizedLed.h[]
+include::Lab1\\Application\\Led\\OptimizedLed.h[]
 ----
 
 === ChessMode.cpp
 
 [source,cpp]
 ----
-include::Laba5\\Application\\Mode\\ChessMode.cpp[]
+include::Lab1\\Application\\Mode\\ChessMode.cpp[]
 ----
 
 === ChessMode.h
 
 [source,cpp]
 ----
-include::Laba5\\Application\\Mode\\ChessMode.h[]
+include::Lab1\\Application\\Mode\\ChessMode.h[]
 ----
 
 === CommonMode.cpp
 
 [source,cpp]
 ----
-include::Laba5\\Application\\Mode\\CommonMode.cpp[]
+include::Lab1\\Application\\Mode\\CommonMode.cpp[]
 ----
 
 === CommonMode.h
 
 [source,cpp]
 ----
-include::Laba5\\Application\\Mode\\CommonMode.h[]
+include::Lab1\\Application\\Mode\\CommonMode.h[]
 ----
 
 === FadeGlowMode.cpp
 
 [source,cpp]
 ----
-include::Laba5\\Application\\Mode\\FadeGlowMode.cpp[]
+include::Lab1\\Application\\Mode\\FadeGlowMode.cpp[]
 ----
 
 === FadeGlowMode.h
 
 [source,cpp]
 ----
-include::Laba5\\Application\\Mode\\FadeGlowMode.h[]
+include::Lab1\\Application\\Mode\\FadeGlowMode.h[]
 ----
 
 === RunningLightMode.cpp
 
 [source,cpp]
 ----
-include::Laba5\\Application\\Mode\\RunningLightMode.cpp[]
+include::Lab1\\Application\\Mode\\RunningLightMode.cpp[]
 ----
 
 === RunningLightMode.h
 
 [source,cpp]
 ----
-include::Laba5\\Application\\Mode\\RunningLightMode.h[]
+include::Lab1\\Application\\Mode\\RunningLightMode.h[]
 ----

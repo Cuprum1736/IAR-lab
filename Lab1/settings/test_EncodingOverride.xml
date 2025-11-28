@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userOverrides>
+    <override>
+        <path>C:\GitHub\RtosWrapper\Rtos\wrapper\thread.hpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>C:\Projects\Lab1\Application\Led\OptimizedLed.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>C:\Projects\Lab1\main.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение измерительных процессов\lab2\Lab1\Application\Mode\ChessMode.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение измерительных процессов\lab2\Lab1\Application\Mode\ChessMode.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+</userOverrides>

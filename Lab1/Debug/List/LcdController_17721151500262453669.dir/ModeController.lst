@@ -1,0 +1,269 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.50.2.385/W64 for ARM         28/Nov/2025  22:44:16
+# Copyright 1999-2024 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Application\LcdController\ModeController.cpp
+#    Command line                 =
+#        -f "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@
+#        @@@@@@@@@@@ @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Debug\Obj\LcdController_17721151500262453669.dir\ModeController.o.rsp"
+#        ("D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@
+#        @@@@@@@@@@@ @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Application\LcdController\ModeController.cpp" -lC
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Debug\List\LcdController_17721151500262453669.dir"
+#        -lA "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@
+#        @@@@@@@@@@@ @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Debug\List\LcdController_17721151500262453669.dir"
+#        -o "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@
+#        @@@@@@@@@@@ @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Debug\Obj\LcdController_17721151500262453669.dir"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config
+#        E:\IAR_Embedded_Workbench_for_ARM\arm\inc\c\DLib_Config_Normal.h -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Common\\" -I "D:\@@@@@@@
+#        @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\AHardware\Registers\STM32F411\FieldValues\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\AHardware\Registers\STM32F411\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\AHardware\Registers\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\AHardware\Registers\CortexM4\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\AHardware\Registers\CortexM4\FieldValues\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Led\Contracts\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Led\\" -I "D:\@@@@@@@
+#        @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Mode\Contracts\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Button\\" -I "D:\@@@@@@@
+#        @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Button\Contrats\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\LcdController\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Application\LcdController\Contracts\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Mode\\" -On --c++
+#        --no_exceptions --no_rtti) --dependencies=n "D:\@@@@@@@
+#        @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Debug\Obj\LcdController_17721151500262453669.dir\ModeController.o.iar_deps"
+#    Locale                       =  C
+#    List file                    =
+#        D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Debug\List\LcdController_17721151500262453669.dir\ModeController.lst
+#    Object file                  =
+#        D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Debug\Obj\LcdController_17721151500262453669.dir\ModeController.o
+#    Runtime model:                  
+#      __CPP_Exceptions           =  Disabled
+#      __CPP_Language             =  C++14
+#      __CPP_Library              =  DLib
+#      __CPP_Runtime              =  1
+#      __SystemLibrary            =  DLib
+#      __dlib_file_descriptor     =  0
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@ @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\LcdController\ModeController.cpp
+      1          #include <cassert>
+Warning[Ms014]: some characters could not be correctly encoded in "D:\@@@@@@@
+          @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+          @@@@@@@@@@@@@
+          @@@@@@@@@\lab2\Lab1\Debug\List\LcdController_17721151500262453669.di
+          r\ModeController.s", and have been replaced with '@'. The first such
+          character has unicode code point 0x420 ("@")
+      2          #include "ModeController.h"
+
+   \                                 In section .text, align 2
+   \   __vfp IController::subobject IController() noexcept
+   \                     _ZN11IControllerC2Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN11IControllerC1Ev
+   \        0xA   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp IController::IController() noexcept
+   \                     _ZN11IControllerC1Ev: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp auto std::size<tModes>(tModes const &)->size_t
+   \                     _ZSt4sizeISt5arrayIP5IModeLj3EEEDTcldtfp_4sizeEERKT_: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZNKSt5arrayIP5IModeLj3EE4sizeEv
+   \        0xA   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp size_t std::array<IMode *, 3U>::size() const noexcept
+   \                     _ZNKSt5arrayIP5IModeLj3EE4sizeEv: (+1)
+   \        0x0   0x0001             MOVS     R1,R0
+   \        0x2   0x2003             MOVS     R0,#+3
+   \        0x4   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp IMode *const & std::array<IMode *, 3U>::operator[](size_t) const
+   \                     _ZNKSt5arrayIP5IModeLj3EEixEj: (+1)
+   \        0x0   0xEB00 0x0081      ADD      R0,R0,R1, LSL #+2
+   \        0x4   0x4770             BX       LR
+      3          
+
+   \                                 In section .text, align 2, keep-with-next
+   \   __vfp ModeController::subobject ModeController(tModes const &)
+   \                     _ZN14ModeControllerC2ERKSt5arrayIP5IModeLj3EE: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN14ModeControllerC1ERKSt5arrayIP5IModeLj3EE
+   \        0xA   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2, keep-with-next
+      4          ModeController::ModeController(const tModes& modes):
+      5              mModes(modes),
+      6              mCurrentMode(0)
+      7              {
+   \                     _ZN14ModeControllerC1ERKSt5arrayIP5IModeLj3EE: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0020             MOVS     R0,R4
+   \        0x8   0x.... 0x....      BL       _ZN11IControllerC2Ev
+   \        0xC   0x....             LDR.N    R0,??DataTable1
+   \        0xE   0x6020             STR      R0,[R4, #+0]
+   \       0x10   0x1D23             ADDS     R3,R4,#+4
+   \       0x12   0xE895 0x0007      LDM      R5,{R0-R2}
+   \       0x16   0xE883 0x0007      STM      R3,{R0-R2}
+   \       0x1A   0x2000             MOVS     R0,#+0
+   \       0x1C   0x6120             STR      R0,[R4, #+16]
+      8                
+      9              }
+   \       0x1E   0x0020             MOVS     R0,R4
+   \       0x20   0xBD32             POP      {R1,R4,R5,PC}
+
+   \                                 In section .text, align 2, keep-with-next
+     10              void ModeController::SwitchMode() 
+     11              {
+   \                     _ZN14ModeController10SwitchModeEv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+     12                mCurrentMode++;
+   \        0x4   0x6920             LDR      R0,[R4, #+16]
+   \        0x6   0x1C40             ADDS     R0,R0,#+1
+   \        0x8   0x6120             STR      R0,[R4, #+16]
+     13                  if (mCurrentMode == std::size(mModes))
+   \        0xA   0x1D20             ADDS     R0,R4,#+4
+   \        0xC   0x.... 0x....      BL       _ZSt4sizeISt5arrayIP5IModeLj3EEEDTcldtfp_4sizeEERKT_
+   \       0x10   0x6921             LDR      R1,[R4, #+16]
+   \       0x12   0x4281             CMP      R1,R0
+   \       0x14   0xD101             BNE.N    ??SwitchMode_0
+     14                  {
+     15                    mCurrentMode = 0;
+   \       0x16   0x2000             MOVS     R0,#+0
+   \       0x18   0x6120             STR      R0,[R4, #+16]
+     16                  }
+     17                  mModes[mCurrentMode]->Init();
+   \                     ??SwitchMode_0: (+1)
+   \       0x1A   0x6921             LDR      R1,[R4, #+16]
+   \       0x1C   0x1D20             ADDS     R0,R4,#+4
+   \       0x1E   0x.... 0x....      BL       _ZNKSt5arrayIP5IModeLj3EEixEj
+   \       0x22   0x6800             LDR      R0,[R0, #+0]
+   \       0x24   0x6801             LDR      R1,[R0, #+0]
+   \       0x26   0x6809             LDR      R1,[R1, #+0]
+   \       0x28   0x4788             BLX      R1
+     18              }
+   \       0x2A   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2, keep-with-next
+     19              void ModeController::RunCurrentMode() 
+     20              {
+   \                     _ZN14ModeController14RunCurrentModeEv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+     21                mModes[mCurrentMode]->Execute();
+   \        0x4   0x6921             LDR      R1,[R4, #+16]
+   \        0x6   0x1D20             ADDS     R0,R4,#+4
+   \        0x8   0x.... 0x....      BL       _ZNKSt5arrayIP5IModeLj3EEixEj
+   \        0xC   0x6800             LDR      R0,[R0, #+0]
+   \        0xE   0x6801             LDR      R1,[R0, #+0]
+   \       0x10   0x6849             LDR      R1,[R1, #+4]
+   \       0x12   0x4788             BLX      R1
+     22              }
+   \       0x14   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \        0x0   0x....'....        DC32     _ZTV14ModeController+8
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   IController::IController() noexcept
+       8   IController::subobject IController() noexcept
+         8   -> IController::IController() noexcept
+      16   ModeController::ModeController(tModes const &)
+        16   -> IController::subobject IController() noexcept
+       8   ModeController::RunCurrentMode()
+         8   -- Indirect call
+         8   -> std::array<IMode *, 3U>::operator[](size_t) const
+       8   ModeController::SwitchMode()
+         8   -- Indirect call
+         8   -> std::array<IMode *, 3U>::operator[](size_t) const
+         8   -> std::size<tModes>(tModes const &)->size_t
+       8   ModeController::subobject ModeController(tModes const &)
+         8   -> ModeController::ModeController(tModes const &)
+       0   std::array<IMode *, 3U>::operator[](size_t) const
+       0   std::array<IMode *, 3U>::size() const noexcept
+       8   std::size<tModes>(tModes const &)->size_t
+         8   -> std::array<IMode *, 3U>::size() const noexcept
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       2  IController::IController() noexcept
+      12  IController::subobject IController() noexcept
+      34  ModeController::ModeController(tModes const &)
+      22  ModeController::RunCurrentMode()
+      44  ModeController::SwitchMode()
+      12  ModeController::subobject ModeController(tModes const &)
+       6  std::array<IMode *, 3U>::operator[](size_t) const
+       6  std::array<IMode *, 3U>::size() const noexcept
+      12  std::size<tModes>(tModes const &)->size_t
+     112  -- Other
+
+ 
+ 112 bytes in section .rodata
+ 154 bytes in section .text
+ 
+ 116 bytes of CODE  memory (+  38 bytes shared)
+   0 bytes of CONST memory (+ 112 bytes shared)
+
+Errors: none
+Warnings: 1
