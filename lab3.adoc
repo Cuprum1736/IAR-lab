@@ -86,12 +86,12 @@ image::image4.png[Создание Pull Request в веб-интерфейсе G
 
 
 [.text-center]
-image::image6.png[Добавление reviewer (преподавателя) в Pull Request, width=600]
+image::image5.png[Добавление reviewer (преподавателя) в Pull Request, width=600]
 
 После проверки преподаватель оставил комментарии (если были) и, при отсутствии замечаний, нажал кнопку **“Approve”**.
 
 [.text-center]
-image::image7.png[Статус Pull Request: “Approved” , width=600]
+image::image6.png[Статус Pull Request: “Approved” , width=600]
 
 === 5. Слияние в основную ветку (Merge)
 
