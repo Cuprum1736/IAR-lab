@@ -2,7 +2,12 @@
 include::Title.adoc[]
 
 = Лабораторная работа 3: Управление ветками и процесс слияния в Git/GitHub
+:toc: macro
+:toc-title: Оглавление
+:imagesdir: images
+:source-highlighter: coderay
 
+toc::[]
 
 == Введение
 
