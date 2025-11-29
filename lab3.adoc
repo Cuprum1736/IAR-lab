@@ -1,11 +1,14 @@
 :doctype: book
 include::Title.adoc[]
-
+"asciidoc.preview.asciidoctorAttributes": {
+    "source-highlighter": "highlightjs"
+  },
 = Лабораторная работа 3: Управление ветками и процесс слияния в Git/GitHub
 :toc: macro
 :toc-title: Оглавление
 :imagesdir: images
 :source-highlighter: coderay
+:figure-caption: Рисунок
 
 toc::[]
 
@@ -103,8 +106,13 @@ image::image6.png[Статус Pull Request: “Approved” , width=600]
 
 > После слияния ветка `lab3` может быть удалена (опционально) через кнопку **“Delete branch”** в интерфейсе GitHub.
 
----
 
+== 6. Команда Commit
+
+Данная команда используется для добавления комментария на локальной машине.
+[.text-center]
+image::image7.png[]
+---
 == Вывод
 
 В ходе лабораторной работы был реализован полный цикл разработки в рамках командного Git-Workflow:
