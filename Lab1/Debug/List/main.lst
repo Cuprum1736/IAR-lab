@@ -1,0 +1,786 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.50.2.385/W64 for ARM         28/Nov/2025  22:54:35
+# Copyright 1999-2024 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\main.cpp
+#    Command line                 =
+#        -f "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@
+#        @@@@@@@@@@@ @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Debug\Obj\main.o.rsp"
+#        ("D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@
+#        @@@@@@@@@@@ @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\main.cpp" -lC
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Debug\List\\" -lA "D:\@@@@@@@
+#        @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Debug\List\\" -o "D:\@@@@@@@
+#        @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Debug\Obj\\" --no_cse --no_unroll
+#        --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling
+#        --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp
+#        --dlib_config
+#        E:\IAR_Embedded_Workbench_for_ARM\arm\inc\c\DLib_Config_Normal.h -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Common\\" -I "D:\@@@@@@@
+#        @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\AHardware\Registers\STM32F411\FieldValues\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\AHardware\Registers\STM32F411\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\AHardware\Registers\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\AHardware\Registers\CortexM4\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\AHardware\Registers\CortexM4\FieldValues\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Led\Contracts\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Led\\" -I "D:\@@@@@@@
+#        @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Mode\Contracts\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Button\\" -I "D:\@@@@@@@
+#        @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Button\Contrats\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\LcdController\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@
+#        @@@@@@@@@\lab2\Lab1\Application\LcdController\Contracts\\" -I
+#        "D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Application\Mode\\" -On --c++
+#        --no_exceptions --no_rtti) --dependencies=n "D:\@@@@@@@
+#        @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Debug\Obj\main.o.iar_deps"
+#    Locale                       =  C
+#    List file                    =
+#        D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Debug\List\\main.lst
+#    Object file                  =
+#        D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+#        @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Debug\Obj\\main.o
+#    Runtime model:                  
+#      __CPP_Exceptions           =  Disabled
+#      __CPP_Language             =  C++14
+#      __CPP_Library              =  DLib
+#      __CPP_Runtime              =  1
+#      __SystemLibrary            =  DLib
+#      __dlib_file_descriptor     =  0
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+D:\@@@@@@@ @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@ @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\main.cpp
+      1          #include "iostream"//for std::cout
+      2          #include "rccregisters.hpp" // for RCC
+      3          #include "gpioaregisters.hpp" // for GPIOA
+      4          #include "gpiocregisters.hpp" // for GPIOС
+      5          #include <array>// for std::array
+      6          #include "Led.h" // for Led, ILedToggable, ILedOnOff
+      7          #include "OptimizedLed.h" // for OptimizedLed
+
+   \                                 In section .text, align 4
+   \   __vfp void OptimizedLed<1'073'872'916U, 5U>::Toggle() const
+   \                     _ZNK12OptimizedLedILj1073872916ELj5EE6ToggleEv: (+1)
+   \        0x0   0x4A02             LDR.N    R2,??Toggle_0
+   \        0x2   0x6811             LDR      R1,[R2, #+0]
+   \        0x4   0xF091 0x0120      EORS     R1,R1,#0x20
+   \        0x8   0x6011             STR      R1,[R2, #+0]
+   \        0xA   0x4770             BX       LR
+   \                     ??Toggle_0:
+   \        0xC   0x4002'0014        DC32     0x40020014
+
+   \                                 In section .text, align 4
+   \   __vfp void OptimizedLed<1'073'872'916U, 5U>::On() const
+   \                     _ZNK12OptimizedLedILj1073872916ELj5EE2OnEv: (+1)
+   \        0x0   0x4A02             LDR.N    R2,??On_0
+   \        0x2   0x6811             LDR      R1,[R2, #+0]
+   \        0x4   0xF051 0x0120      ORRS     R1,R1,#0x20
+   \        0x8   0x6011             STR      R1,[R2, #+0]
+   \        0xA   0x4770             BX       LR
+   \                     ??On_0:
+   \        0xC   0x4002'0014        DC32     0x40020014
+
+   \                                 In section .text, align 4
+   \   __vfp void OptimizedLed<1'073'872'916U, 5U>::Off() const
+   \                     _ZNK12OptimizedLedILj1073872916ELj5EE3OffEv: (+1)
+   \        0x0   0x4A02             LDR.N    R2,??Off_0
+   \        0x2   0x6811             LDR      R1,[R2, #+0]
+   \        0x4   0xF031 0x0120      BICS     R1,R1,#0x20
+   \        0x8   0x6011             STR      R1,[R2, #+0]
+   \        0xA   0x4770             BX       LR
+   \                     ??Off_0:
+   \        0xC   0x4002'0014        DC32     0x40020014
+      8          #include "CommonMode.h" //for CommonMode
+      9          #include "RunningLightMode.h" // for RunningLightMode
+     10          #include "FadeGlowMode.h" // for FadeGlowMode
+     11          #include "ChessMode.h" // for ChessMode
+     12          #include "UserButton.h" // for UserButton
+     13          #include "ModeController.h" // for ModeController
+     14          
+     15          
+
+   \                                 In section .data, align 4
+     16          std::uint32_t SystemCoreClock = 16'000'000U;
+   \                     SystemCoreClock:
+   \        0x0   0x00F4'2400        DC32 16'000'000
+     17          
+     18          extern "C" {
+
+   \                                 In section .text, align 2, keep-with-next
+     19          int __low_level_init(void)
+     20          {
+     21            //Switch on external 16 MHz oscillator
+     22            RCC::CR::HSION::On::Set();
+   \                     __low_level_init: (+1)
+   \        0x0   0x....             LDR.N    R1,??DataTable2_13
+   \        0x2   0x680A             LDR      R2,[R1, #+0]
+   \        0x4   0xF052 0x0001      ORRS     R0,R2,#0x1
+   \        0x8   0x6008             STR      R0,[R1, #+0]
+     23            while (RCC::CR::HSIRDY::NotReady::IsSet())
+   \                     ??__low_level_init_0: (+1)
+   \        0xA   0x6808             LDR      R0,[R1, #+0]
+   \        0xC   0x0840             LSRS     R0,R0,#+1
+   \        0xE   0xF010 0x0001      ANDS     R0,R0,#0x1
+   \       0x12   0xF090 0x0001      EORS     R0,R0,#0x1
+   \       0x16   0xB2C0             UXTB     R0,R0
+   \       0x18   0x2800             CMP      R0,#+0
+   \       0x1A   0xD1F6             BNE.N    ??__low_level_init_0
+     24            {
+     25          
+     26            }
+     27            //Switch system clock on external oscillator
+     28            RCC::CFGR::SW::Hsi::Set();
+   \       0x1C   0x....             LDR.N    R1,??DataTable2_14
+   \       0x1E   0x680A             LDR      R2,[R1, #+0]
+   \       0x20   0x0890             LSRS     R0,R2,#+2
+   \       0x22   0x0080             LSLS     R0,R0,#+2
+   \       0x24   0x6008             STR      R0,[R1, #+0]
+     29            while (!RCC::CFGR::SWS::Hsi::IsSet())
+   \                     ??__low_level_init_1: (+1)
+   \       0x26   0x6808             LDR      R0,[R1, #+0]
+   \       0x28   0xF010 0x0F0C      TST      R0,#0xC
+   \       0x2C   0xD101             BNE.N    ??__low_level_init_2
+   \       0x2E   0x2001             MOVS     R0,#+1
+   \       0x30   0xE000             B.N      ??__low_level_init_3
+   \                     ??__low_level_init_2: (+1)
+   \       0x32   0x2000             MOVS     R0,#+0
+   \                     ??__low_level_init_3: (+1)
+   \       0x34   0xB2C0             UXTB     R0,R0
+   \       0x36   0x2800             CMP      R0,#+0
+   \       0x38   0xD0F5             BEQ.N    ??__low_level_init_1
+     30            {
+     31          
+     32            }
+     33            
+     34            RCC::APB2ENR::SYSCFGEN::Enable::Set();
+   \       0x3A   0x....             LDR.N    R2,??DataTable2_15
+   \       0x3C   0x6811             LDR      R1,[R2, #+0]
+   \       0x3E   0xF451 0x4080      ORRS     R0,R1,#0x4000
+   \       0x42   0x6010             STR      R0,[R2, #+0]
+     35          
+     36            return 1;
+   \       0x44   0x2001             MOVS     R0,#+1
+   \       0x46   0x4770             BX       LR
+     37          }
+     38          }
+     39          
+
+   \                                 In section .text, align 4, keep-with-next
+     40          void delay(int cycles)
+     41          {
+     42            for(int i = 0; i < cycles; ++i)    
+   \                     _Z5delayi: (+1)
+   \        0x0   0x2100             MOVS     R1,#+0
+   \                     ??delay_0: (+1)
+   \        0x2   0x4281             CMP      R1,R0
+   \        0x4   0xDA01             BGE.N    ??delay_1
+     43            {
+     44              asm volatile("");
+   \        0x6   0x1C49             ADDS     R1,R1,#+1
+   \        0x8   0xE7FB             B.N      ??delay_0
+     45            }    
+     46          }
+   \                     ??delay_1: (+1)
+   \        0xA   0x4770             BX       LR
+     47          ///////////////////////////// ON/OFF LED /////////////////////////////
+     48          
+     49          ///////////////////////// BUTTON //////////////////
+     50          /*class IButton
+     51          {
+     52          public:
+     53            virtual bool WasPressed() const = 0;
+     54          };
+     55          */
+     56          /*class UserButton : public IButton
+     57          {
+     58          public:
+     59            UserButton(std::uint32_t pinNum, std::uint32_t registerAddress):
+     60              mPinNum(pinNum),
+     61              mRegisterAddress(registerAddress)
+     62              {
+     63              
+     64              }
+     65            bool WasPressed() const override
+     66            {
+     67              bool isButtonPressed = ((*reinterpret_cast<std::uint32_t*>(mRegisterAddress) & (1 << mPinNum)) == 0);
+     68              return isButtonPressed;
+     69            }
+     70          private:
+     71            std::uint32_t mRegisterAddress;
+     72            std::uint32_t mPinNum;
+     73          };
+     74          */
+     75          
+     76          ///////////////////////////////////// MODES FOR LEDS ///////////////////////
+     77             
+     78          /*class IMode
+     79          {
+     80          public:
+     81            virtual void Init() = 0;
+     82            virtual void Execute() = 0;
+     83          };
+     84          */
+     85          //const auto ledsCount = static_cast<std::size_t>(4);
+     86          //using tLeds = std::array<ILedToggable*, ledsCount>;
+     87          //using tLedsOnOff = std::array<ILedOnOff*, ledsCount>;
+     88          
+     89          /*class CommonMode: public IMode
+     90          {
+     91          public:
+     92            CommonMode(const tLeds& leds, const tLedsOnOff& ledsOnOff):
+     93              mLeds(leds),
+     94              mLedsOnOff(ledsOnOff),
+     95              mCurrentLedNumber(0)
+     96              {
+     97                
+     98              }
+     99              void Init() override
+    100              {
+    101                mCurrentLedNumber = 0;
+    102                for (auto it: mLedsOnOff)
+    103                {
+    104                  it->Off();
+    105                }
+    106              }
+    107          protected:
+    108            const tLeds& mLeds;
+    109            const tLedsOnOff& mLedsOnOff; 
+    110            std::uint32_t mCurrentLedNumber;
+    111          };
+    112          */
+    113          /*class RunningLightMode : public CommonMode // MODE 1
+    114          {
+    115          public:
+    116            RunningLightMode(const tLeds& leds, const tLedsOnOff& ledsOnOff):
+    117              CommonMode(leds, ledsOnOff)
+    118              {
+    119                
+    120              }
+    121              void Execute() override
+    122              {
+    123                mLeds[mCurrentLedNumber++]->Toggle();
+    124                if (mCurrentLedNumber == std::size(mLeds))
+    125                {
+    126                  mCurrentLedNumber = 0;
+    127                }
+    128              }
+    129          };
+    130          */
+    131          /*class FadeGlowMode : public CommonMode // MODE 2
+    132          {
+    133          public:
+    134            FadeGlowMode(const tLeds& leds, const tLedsOnOff& ledsOnOff):
+    135          CommonMode(leds, ledsOnOff)
+    136              {
+    137                
+    138              }
+    139              
+    140              void Execute() override
+    141              {
+    142                for(auto it: mLeds)
+    143                {
+    144                  mLeds[mCurrentLedNumber++]->Toggle();
+    145                  if (mCurrentLedNumber == std::size(mLeds))
+    146                  {
+    147                    mCurrentLedNumber = 0;
+    148                  }
+    149                }
+    150              }
+    151          };*/
+    152          /*class ChessMode : public CommonMode // MODE 3
+    153          {
+    154          public:
+    155            ChessMode(const tLeds& leds, const tLedsOnOff& ledsOnOff):
+    156          CommonMode(leds, ledsOnOff)
+    157              {
+    158                
+    159              }
+    160              
+    161              void Execute() override
+    162           {
+    163              for (std::size_t i = 0; i < std::size(mLeds); ++i)
+    164              {
+    165                  if ((i % 2 == 0) == oddPhase)
+    166                      mLedsOnOff[i]->On();
+    167                  else
+    168                      mLedsOnOff[i]->Off();
+    169              }
+    170              oddPhase = !oddPhase;
+    171          }
+    172          };
+    173          */
+    174          ////////////////////////MODE SWITCHER///////////////
+    175          
+    176          /*class IController
+    177          {
+    178          public:
+    179            virtual void SwitchMode() = 0;
+    180            virtual void RunCurrentMode() = 0;
+    181          };
+    182          */
+    183          //const std::uint32_t modesCount = 3;
+    184          //using tModes = std::array<IMode*, modesCount>;
+    185          
+    186          /*class ModeController: public IController
+    187          {
+    188          public:
+    189            ModeController(const tModes& modes):
+    190              mModes(modes),
+    191              mCurrentMode(0)
+    192              {
+    193                
+    194              }
+    195              void SwitchMode() override
+    196              {
+    197                mCurrentMode++;
+    198                  if (mCurrentMode == std::size(mModes))
+    199                  {
+    200                    mCurrentMode = 0;
+    201                  }
+    202                  mModes[mCurrentMode]->Init();
+    203              }
+    204              void RunCurrentMode() override
+    205              {
+    206                mModes[mCurrentMode]->Execute();
+    207              }
+    208          private:
+    209            const tModes mModes;
+    210            std::uint32_t mCurrentMode;
+    211          };
+    212          */
+    213          ////////////////////////////////
+    214          /*class TestDynamic
+    215          {
+    216          public:
+    217            int GetI() {return i;}
+    218          private:
+    219            int i = 0;
+    220          };
+    221          */
+    222          constexpr std::uint32_t buttonPinNum = 13;
+    223          constexpr std::uint32_t portCIdrAddress = 0x40020810U;
+
+   \                                 In section .text, align 2, keep-with-next
+   \   static __intrinsic __vfp void __sti__routine()
+   \                     __sti__routine: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+    224          UserButton userButton(buttonPinNum, portCIdrAddress);
+   \        0x2   0x....             LDR.N    R2,??DataTable2
+   \        0x4   0x210D             MOVS     R1,#+13
+   \        0x6   0x....             LDR.N    R0,??DataTable2_1
+   \        0x8   0x.... 0x....      BL       _ZN10UserButtonC1Ejj
+    225          
+    226          Led led1(5, 0x40020814U);
+   \        0xC   0x....             LDR.N    R4,??DataTable2_2
+   \        0xE   0x0022             MOVS     R2,R4
+   \       0x10   0x2105             MOVS     R1,#+5
+   \       0x12   0x....             LDR.N    R0,??DataTable2_3
+   \       0x14   0x.... 0x....      BL       _ZN3LedC1Ejj
+    227          Led led2(8, 0x40020814U);
+   \       0x18   0x0022             MOVS     R2,R4
+   \       0x1A   0x2108             MOVS     R1,#+8
+   \       0x1C   0x....             LDR.N    R0,??DataTable2_4
+   \       0x1E   0x.... 0x....      BL       _ZN3LedC1Ejj
+    228          Led led3(9, 0x40020814U);
+   \       0x22   0x0022             MOVS     R2,R4
+   \       0x24   0x2109             MOVS     R1,#+9
+   \       0x26   0x....             LDR.N    R0,??DataTable2_5
+   \       0x28   0x.... 0x....      BL       _ZN3LedC1Ejj
+    229          //Led led4(5, 0x40020014U);
+    230          OptimizedLed<0x40020014U, 5> led4;
+    231          
+    232          tLeds leds = 
+    233          {
+    234            &led1,
+    235            &led2,
+    236            &led3,
+    237            &led4
+    238          };
+    239          
+    240          tLedsOnOff ledsOnOff = 
+    241          {
+    242            &led1,
+    243            &led2,
+    244            &led3,
+    245            &led4
+    246          };
+    247          
+    248          RunningLightMode runningLightMode(leds, ledsOnOff);
+   \       0x2C   0x....             LDR.N    R5,??DataTable2_6
+   \       0x2E   0x....             LDR.N    R4,??DataTable2_7
+   \       0x30   0x0022             MOVS     R2,R4
+   \       0x32   0x0029             MOVS     R1,R5
+   \       0x34   0x....             LDR.N    R0,??DataTable2_8
+   \       0x36   0x.... 0x....      BL       _ZN16RunningLightModeC1ERKSt5arrayIP12ILedToggableLj4EERKS0_IP9ILedOnOffLj4EE
+    249          FadeGlowMode fadeGlowMode(leds, ledsOnOff);
+   \       0x3A   0x0022             MOVS     R2,R4
+   \       0x3C   0x0029             MOVS     R1,R5
+   \       0x3E   0x....             LDR.N    R0,??DataTable2_9
+   \       0x40   0x.... 0x....      BL       _ZN12FadeGlowModeC1ERKSt5arrayIP12ILedToggableLj4EERKS0_IP9ILedOnOffLj4EE
+    250          ChessMode chessMode(leds, ledsOnOff);
+   \       0x44   0x0022             MOVS     R2,R4
+   \       0x46   0x0029             MOVS     R1,R5
+   \       0x48   0x....             LDR.N    R0,??DataTable2_10
+   \       0x4A   0x.... 0x....      BL       _ZN9ChessModeC1ERKSt5arrayIP12ILedToggableLj4EERKS0_IP9ILedOnOffLj4EE
+    251          
+    252          tModes modes
+    253          {
+    254            &runningLightMode,
+    255            &fadeGlowMode,
+    256            &chessMode
+    257          };
+    258          
+    259          ModeController modeController(modes);
+   \       0x4E   0x....             LDR.N    R1,??DataTable2_11
+   \       0x50   0x....             LDR.N    R0,??DataTable2_12
+   \       0x52   0x.... 0x....      BL       _ZN14ModeControllerC1ERKSt5arrayIP5IModeLj3EE
+   \       0x56   0xBD31             POP      {R0,R4,R5,PC}
+
+   \                                 In section .bss, align 4
+   \                     userButton:
+   \        0x0                      DS8 12
+
+   \                                 In section .bss, align 4
+   \                     led1:
+   \        0x0                      DS8 16
+
+   \                                 In section .bss, align 4
+   \                     led2:
+   \        0x0                      DS8 16
+
+   \                                 In section .bss, align 4
+   \                     led3:
+   \        0x0                      DS8 16
+
+   \                                 In section .data, align 4
+   \                     led4:
+   \        0x0   0x....'....        DC32 _ZTV12OptimizedLedILj1073872916ELj5EE + 0x8
+   \        0x4   0x....'....        DC32 _ZTV12OptimizedLedILj1073872916ELj5EE + 0x1c
+
+   \                                 In section .data, align 4
+   \                     leds:
+   \        0x0   0x....'....        DC32 led1, led2, led3, led4
+   \              0x....'....  
+   \              0x....'....  
+   \              0x....'....
+
+   \                                 In section .data, align 4
+   \                     ledsOnOff:
+   \        0x0   0x....'....        DC32 led1 + 0x4, led2 + 0x4, led3 + 0x4, led4 + 0x4
+   \              0x....'....  
+   \              0x....'....  
+   \              0x....'....
+
+   \                                 In section .bss, align 4
+   \                     runningLightMode:
+   \        0x0                      DS8 16
+
+   \                                 In section .bss, align 4
+   \                     fadeGlowMode:
+   \        0x0                      DS8 16
+
+   \                                 In section .bss, align 4
+   \                     chessMode:
+   \        0x0                      DS8 20
+
+   \                                 In section .data, align 4
+   \                     modes:
+   \        0x0   0x....'....        DC32 runningLightMode, fadeGlowMode, chessMode
+   \              0x....'....  
+   \              0x....'....
+
+   \                                 In section .bss, align 4
+   \                     modeController:
+   \        0x0                      DS8 20
+    260          
+
+   \                                 In section .text, align 2, keep-with-next
+    261          int main()
+    262          { 
+   \                     main: (+1)
+   \        0x0   0xB5F8             PUSH     {R3-R7,LR}
+    263           
+    264            //Подать тактирование на порт А
+    265            RCC::AHB1ENR::GPIOAEN::Enable::Set() ;
+   \        0x2   0x....             LDR.N    R2,??DataTable2_16
+   \        0x4   0x6810             LDR      R0,[R2, #+0]
+   \        0x6   0xF050 0x0101      ORRS     R1,R0,#0x1
+   \        0xA   0x6011             STR      R1,[R2, #+0]
+    266            //Подать тактирование на порт С
+    267            RCC::AHB1ENR::GPIOCEN::Enable::Set() ;
+   \        0xC   0x6811             LDR      R1,[R2, #+0]
+   \        0xE   0xF051 0x0304      ORRS     R3,R1,#0x4
+   \       0x12   0x6013             STR      R3,[R2, #+0]
+    268            //Порта А.5 на вывод
+    269            GPIOA::MODER::MODER5::Output::Set() ;
+   \       0x14   0x....             LDR.N    R4,??DataTable2_17
+   \       0x16   0x6822             LDR      R2,[R4, #+0]
+   \       0x18   0x2601             MOVS     R6,#+1
+   \       0x1A   0x0013             MOVS     R3,R2
+   \       0x1C   0xF366 0x238B      BFI      R3,R6,#+10,#+2
+   \       0x20   0x6023             STR      R3,[R4, #+0]
+    270            //Порта C.5,C.8, C.9 на вывод
+    271            GPIOC::MODER::MODER5::Output::Set() ;
+   \       0x22   0x....             LDR.N    R3,??DataTable2_18
+   \       0x24   0x681C             LDR      R4,[R3, #+0]
+   \       0x26   0x0025             MOVS     R5,R4
+   \       0x28   0xF366 0x258B      BFI      R5,R6,#+10,#+2
+   \       0x2C   0x601D             STR      R5,[R3, #+0]
+    272            GPIOC::MODER::MODER8::Output::Set() ;
+   \       0x2E   0x681D             LDR      R5,[R3, #+0]
+   \       0x30   0x002F             MOVS     R7,R5
+   \       0x32   0xF366 0x4711      BFI      R7,R6,#+16,#+2
+   \       0x36   0x601F             STR      R7,[R3, #+0]
+    273            GPIOC::MODER::MODER9::Output::Set() ;
+   \       0x38   0xF8D3 0xC000      LDR      R12,[R3, #+0]
+   \       0x3C   0x4667             MOV      R7,R12
+   \       0x3E   0xF366 0x4793      BFI      R7,R6,#+18,#+2
+   \       0x42   0x601F             STR      R7,[R3, #+0]
+    274            
+    275            for(;;)
+    276            {   
+    277              if (userButton.WasPressed())
+   \                     ??main_0: (+1)
+   \       0x44   0x....             LDR.N    R0,??DataTable2_1
+   \       0x46   0x.... 0x....      BL       _ZNK10UserButton10WasPressedEv
+   \       0x4A   0x2800             CMP      R0,#+0
+   \       0x4C   0xD002             BEQ.N    ??main_1
+    278              {
+    279                modeController.SwitchMode(); 
+   \       0x4E   0x....             LDR.N    R0,??DataTable2_12
+   \       0x50   0x.... 0x....      BL       _ZN14ModeController10SwitchModeEv
+    280              }
+    281              delay(500000);
+   \                     ??main_1: (+1)
+   \       0x54   0x....             LDR.N    R0,??DataTable2_19
+   \       0x56   0x.... 0x....      BL       _Z5delayi
+    282              modeController.RunCurrentMode(); 
+   \       0x5A   0x....             LDR.N    R0,??DataTable2_12
+   \       0x5C   0x.... 0x....      BL       _ZN14ModeController14RunCurrentModeEv
+   \       0x60   0xE7F0             B.N      ??main_0
+    283              
+    284            
+    285            
+    286               //GPIOA::ODR::ODR5::High::Set();
+    287               //GPIOC::ODR::ODR5::High::Set();
+    288               //GPIOA::ODR::ODR5::Low::Set();
+    289               //GPIOC::ODR::ODR5::Low::Set();
+    290            }
+    291            return 1;
+                   ^
+Warning[Pe111]: statement is unreachable
+Warning[Ms014]: some characters could not be correctly encoded in "D:\@@@@@@@
+          @@@@\@@@@@@@@\@@@@@\@@@@@@@@@ @@@@\@@@@@@@@@@@ @@@@@@@@@@@
+          @@@@@@@@@@@@@ @@@@@@@@@\lab2\Lab1\Debug\List\main.s", and have been
+          replaced with '@'. The first such character has unicode code point
+          0x420 ("@")
+    292          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2:
+   \        0x0   0x4002'0810        DC32     0x40020810
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_1:
+   \        0x0   0x....'....        DC32     userButton
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_2:
+   \        0x0   0x4002'0814        DC32     0x40020814
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_3:
+   \        0x0   0x....'....        DC32     led1
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_4:
+   \        0x0   0x....'....        DC32     led2
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_5:
+   \        0x0   0x....'....        DC32     led3
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_6:
+   \        0x0   0x....'....        DC32     leds
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_7:
+   \        0x0   0x....'....        DC32     ledsOnOff
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_8:
+   \        0x0   0x....'....        DC32     runningLightMode
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_9:
+   \        0x0   0x....'....        DC32     fadeGlowMode
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_10:
+   \        0x0   0x....'....        DC32     chessMode
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_11:
+   \        0x0   0x....'....        DC32     modes
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_12:
+   \        0x0   0x....'....        DC32     modeController
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_13:
+   \        0x0   0x4002'3800        DC32     0x40023800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_14:
+   \        0x0   0x4002'3808        DC32     0x40023808
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_15:
+   \        0x0   0x4002'3844        DC32     0x40023844
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_16:
+   \        0x0   0x4002'3830        DC32     0x40023830
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_17:
+   \        0x0   0x4002'0000        DC32     0x40020000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_18:
+   \        0x0   0x4002'0800        DC32     0x40020800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_19:
+   \        0x0   0x0007'A120        DC32     0x7a120
+
+   \                                 In section .text, align 2
+   \   __vfp void OptimizedLed<1'073'872'916U, 5U>::On for ILedOnOff/-4/() const
+   \                     _ZThn4_NK12OptimizedLedILj1073872916ELj5EE2OnEv: (+1)
+   \        0x0   0x1F00             SUBS     R0,R0,#+4
+   \        0x2   0x.... 0x....      B.W      _ZNK12OptimizedLedILj1073872916ELj5EE2OnEv
+
+   \                                 In section .text, align 2
+   \   __vfp void OptimizedLed<1'073'872'916U, 5U>::Off for ILedOnOff/-4/() const
+   \                     _ZThn4_NK12OptimizedLedILj1073872916ELj5EE3OffEv: (+1)
+   \        0x0   0x1F00             SUBS     R0,R0,#+4
+   \        0x2   0x.... 0x....      B.W      _ZNK12OptimizedLedILj1073872916ELj5EE3OffEv
+    293          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   OptimizedLed<1'073'872'916U, 5U>::Off for ILedOnOff/-4/() const
+         0   -> OptimizedLed<1'073'872'916U, 5U>::Off() const
+       0   OptimizedLed<1'073'872'916U, 5U>::Off() const
+       0   OptimizedLed<1'073'872'916U, 5U>::On for ILedOnOff/-4/() const
+         0   -> OptimizedLed<1'073'872'916U, 5U>::On() const
+       0   OptimizedLed<1'073'872'916U, 5U>::On() const
+       0   OptimizedLed<1'073'872'916U, 5U>::Toggle() const
+       0   __low_level_init
+      16   __sti__routine()
+        16   -> ChessMode::ChessMode(tLeds const &, tLedsOnOff const &)
+        16   -> FadeGlowMode::FadeGlowMode(tLeds const &, tLedsOnOff const &)
+        16   -> Led::Led(uint32_t, uint32_t)
+        16   -> ModeController::ModeController(tModes const &)
+        16   -> RunningLightMode::RunningLightMode(tLeds const &, tLedsOnOff const &)
+        16   -> UserButton::UserButton(uint32_t, uint32_t)
+       0   delay(int)
+      24   main
+        24   -> ModeController::RunCurrentMode()
+        24   -> ModeController::SwitchMode()
+        24   -> UserButton::WasPressed() const
+        24   -> delay(int)
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable2
+       4  ??DataTable2_1
+       4  ??DataTable2_10
+       4  ??DataTable2_11
+       4  ??DataTable2_12
+       4  ??DataTable2_13
+       4  ??DataTable2_14
+       4  ??DataTable2_15
+       4  ??DataTable2_16
+       4  ??DataTable2_17
+       4  ??DataTable2_18
+       4  ??DataTable2_19
+       4  ??DataTable2_2
+       4  ??DataTable2_3
+       4  ??DataTable2_4
+       4  ??DataTable2_5
+       4  ??DataTable2_6
+       4  ??DataTable2_7
+       4  ??DataTable2_8
+       4  ??DataTable2_9
+       6  OptimizedLed<1'073'872'916U, 5U>::Off for ILedOnOff/-4/() const
+      16  OptimizedLed<1'073'872'916U, 5U>::Off() const
+       6  OptimizedLed<1'073'872'916U, 5U>::On for ILedOnOff/-4/() const
+      16  OptimizedLed<1'073'872'916U, 5U>::On() const
+      16  OptimizedLed<1'073'872'916U, 5U>::Toggle() const
+       4  SystemCoreClock
+      72  __low_level_init
+      88  __sti__routine()
+      20  chessMode
+      12  delay(int)
+      16  fadeGlowMode
+      16  led1
+      16  led2
+      16  led3
+       8  led4
+      16  leds
+      16  ledsOnOff
+      98  main
+      20  modeController
+      12  modes
+      16  runningLightMode
+      12  userButton
+     196  -- Other
+
+ 
+ 132 bytes in section .bss
+  56 bytes in section .data
+   4 bytes in section .init_array
+ 192 bytes in section .rodata
+ 410 bytes in section .text
+ 
+ 354 bytes of CODE  memory (+  60 bytes shared)
+   0 bytes of CONST memory (+ 192 bytes shared)
+ 188 bytes of DATA  memory
+
+Errors: none
+Warnings: 2
