@@ -1,14 +1,19 @@
 :doctype: book
-include::Title.adoc[]
-
-= Лабораторная работа 3: Управление ветками и процесс слияния в Git/GitHub
-
 :toc: macro
 :toc-title: Оглавление
 :imagesdir: ./images
 :source-highlighter: coderay
 
+
+
+= Лабораторная работа 3: Управление ветками и процесс слияния в Git/GitHub
+
+
+include::Title.adoc[]
+
 toc::[]
+
+
 
 == Введение
 
@@ -17,6 +22,8 @@ toc::[]
 ---
 
 == Процесс разработки и интеграции
+
+
 
 === 1. Создание новой ветки разработки
 
