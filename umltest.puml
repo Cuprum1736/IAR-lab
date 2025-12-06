@@ -1,5 +1,4 @@
 
-```kroki-plantuml
 @startuml
 
 !theme plain
@@ -103,9 +102,9 @@ ChessMode -up-|> CommonMode
 
 ' ===== КОМПОЗИЦИЯ/АГРЕГАЦИЯ =====
 
-ModeController "1" *--> "modesCount" IMode : mModes
-CommonMode "1" --> "*" ILedToggable : mLeds
-CommonMode "1" --> "*" ILedOnOff : mLedsOnOff
+ModeController "1" o-- "modesCount" IMode : mModes
+CommonMode "1" o-- "*" ILedToggable : mLeds
+CommonMode "1" o-- "*" ILedOnOff : mLedsOnOff
 
 
 
