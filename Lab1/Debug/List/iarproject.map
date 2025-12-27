@@ -1,0 +1,522 @@
+###############################################################################
+#
+# IAR ELF Linker V9.50.2.385/W64 for ARM                  28/Nov/2025  22:54:36
+# Copyright 2007-2024 IAR Systems AB.
+#
+#    Output file  =
+#        D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение
+#        измерительных процессов\lab2\Lab1\Debug\Exe\iarproject.out
+#    Map file     =
+#        D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение
+#        измерительных процессов\lab2\Lab1\Debug\List\iarproject.map
+#    Command line =
+#        -f "D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное
+#        обеспечение измерительных
+#        процессов\lab2\Lab1\Debug\Exe\iarproject.out.rsp" ("D:\РАБОЧИЙ
+#        СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение
+#        измерительных
+#        процессов\lab2\Lab1\Debug\Obj\Mode_16823006984759215243.dir\ChessMode.o"
+#        "D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение
+#        измерительных
+#        процессов\lab2\Lab1\Debug\Obj\Mode_16823006984759215243.dir\CommonMode.o"
+#        "D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение
+#        измерительных
+#        процессов\lab2\Lab1\Debug\Obj\Mode_16823006984759215243.dir\FadeGlowMode.o"
+#        "D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение
+#        измерительных
+#        процессов\lab2\Lab1\Debug\Obj\Led_14876625504071601537.dir\Led.o"
+#        "D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение
+#        измерительных процессов\lab2\Lab1\Debug\Obj\main.o" "D:\РАБОЧИЙ
+#        СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение
+#        измерительных
+#        процессов\lab2\Lab1\Debug\Obj\LcdController_17721151500262453669.dir\ModeController.o"
+#        "D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение
+#        измерительных
+#        процессов\lab2\Lab1\Debug\Obj\Mode_16823006984759215243.dir\RunningLightMode.o"
+#        "D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение
+#        измерительных процессов\lab2\Lab1\Debug\Obj\startupF411RE.o"
+#        "D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение
+#        измерительных
+#        процессов\lab2\Lab1\Debug\Obj\Button_16955066607175535019.dir\UserButton.o"
+#        --no_out_extension -o "D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый
+#        курс\Программное обеспечение измерительных
+#        процессов\lab2\Lab1\Debug\Exe\iarproject.out" --map "D:\РАБОЧИЙ
+#        СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение
+#        измерительных процессов\lab2\Lab1\Debug\List\iarproject.map" --log
+#        libraries,initialization,modules,redirects,sections,veneers,unused_fragments,call_graph
+#        --log_file "D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное
+#        обеспечение измерительных
+#        процессов\lab2\Lab1\Debug\List\iarproject.log" --config "D:\РАБОЧИЙ
+#        СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение
+#        измерительных процессов\lab2\Lab1\stm32f411xE.icf" --semihosting
+#        --entry __iar_program_start --vfe --text_out locale --cpu=Cortex-M4
+#        --fpu=VFPv4_sp) --dependencies=n "D:\РАБОЧИЙ
+#        СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение
+#        измерительных процессов\lab2\Lab1\Debug\Exe\iarproject.out.iar_deps"
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor                     = *
+__CPP_Exceptions              = Disabled
+__CPP_Language                = C++14
+__CPP_Library                 = DLib
+__CPP_Runtime                 = 1
+__Heap_Handler                = Basic
+__SystemLibrary               = DLib
+__dlib_dynamic_initialization = normal
+__dlib_version                = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because --advanced_heap
+was not specified and the application did not appear to
+be primarily optimized for speed.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x807'ffff] { ro };
+define block CSTACK with size = 4K, alignment = 8 { };
+define block HEAP with size = 4K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2001'ffff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section                Kind         Address  Aligment    Size  Object
+  -------                ----         -------  --------    ----  ------
+"A0":                                                     0x198
+  .intvec                const     0x800'0000         4   0x198  startupF411RE.o [1]
+                                 - 0x800'0198             0x198
+
+"P1":                                                     0x964
+  .text                  ro code   0x800'0198         4   0x160  main.o [1]
+  .text                  ro code   0x800'02f8         4    0x36  UserButton.o [2]
+  .text                  ro code   0x800'032e         2    0x2a  copy_init3.o [9]
+  .text                  ro code   0x800'0358         4    0x88  Led.o [4]
+  .text                  ro code   0x800'03e0         4    0x4a  RunningLightMode.o [5]
+  .rodata                zero      0x800'042a               0x1  CommonMode.o [5]
+  .rodata                zero      0x800'042b               0x1  FadeGlowMode.o [5]
+  .text                  ro code   0x800'042c         4    0x7a  FadeGlowMode.o [5]
+  .rodata                const     0x800'04a6               0x1  unwind_debug.o [10]
+  .text                  ro code   0x800'04a8         4    0x7a  ChessMode.o [5]
+  .text                  ro code   0x800'0524         4    0x6a  ModeController.o [3]
+  .text                  ro code   0x800'058e         2     0xc  UserButton.o [2]
+  .text                  ro code   0x800'059a         2     0xc  Led.o [4]
+  .text                  ro code   0x800'05a6         2     0xc  Led.o [4]
+  .text                  ro code   0x800'05b4         4    0x24  ABIassert.o [10]
+  .text                  ro code   0x800'05d8         4    0x72  CommonMode.o [5]
+  .text                  ro code   0x800'064a         2     0x6  FadeGlowMode.o [5]
+  .text                  ro code   0x800'0650         2     0xc  ChessMode.o [5]
+  .text                  ro code   0x800'065c         2    0x18  FadeGlowMode.o [5]
+  .text                  ro code   0x800'0674         2    0x18  FadeGlowMode.o [5]
+  .text                  ro code   0x800'068c         2    0x1c  FadeGlowMode.o [5]
+  .text                  ro code   0x800'06a8         2     0x4  FadeGlowMode.o [5]
+  .text                  ro code   0x800'06ac         2     0x8  FadeGlowMode.o [5]
+  .text                  ro code   0x800'06b4         2     0x6  ChessMode.o [5]
+  .text                  ro code   0x800'06ba         2     0xc  ModeController.o [3]
+  .text                  ro code   0x800'06c6         2     0xc  ModeController.o [3]
+  .text                  ro code   0x800'06d2         2     0x6  ModeController.o [3]
+  .text                  ro code   0x800'06d8         2     0x2  UserButton.o [2]
+  .text                  ro code   0x800'06da         2     0x2  Led.o [4]
+  .text                  ro code   0x800'06dc         2     0x2  Led.o [4]
+  .text                  ro code   0x800'06de         2     0x6  abort.o [6]
+  .text                  ro code   0x800'06e4         2     0xc  CommonMode.o [5]
+  .text                  ro code   0x800'06f0         2    0x18  CommonMode.o [5]
+  .text                  ro code   0x800'0708         2    0x18  CommonMode.o [5]
+  .text                  ro code   0x800'0720         2    0x1c  CommonMode.o [5]
+  .text                  ro code   0x800'073c         2     0x4  CommonMode.o [5]
+  .text                  ro code   0x800'0740         2     0x8  CommonMode.o [5]
+  .text                  ro code   0x800'0748         2     0x6  ChessMode.o [5]
+  .text                  ro code   0x800'0750         4    0x14  FadeGlowMode.o [5]
+  .text                  ro code   0x800'0764         2     0x8  FadeGlowMode.o [5]
+  .text                  ro code   0x800'076c         2    0x12  FadeGlowMode.o [5]
+  .text                  ro code   0x800'077e         2     0x2  ModeController.o [3]
+  .text                  ro code   0x800'0780         2     0x6  ModeController.o [3]
+  .text                  ro code   0x800'0788         4    0x14  exit.o [10]
+  .text                  ro code   0x800'079c         2     0x2  CommonMode.o [5]
+  .text                  ro code   0x800'07a0         4    0x14  CommonMode.o [5]
+  .text                  ro code   0x800'07b4         2     0x8  CommonMode.o [5]
+  .text                  ro code   0x800'07bc         2    0x12  CommonMode.o [5]
+  .text                  ro code   0x800'07ce         2     0x2  FadeGlowMode.o [5]
+  .text                  ro code   0x800'07d0         2     0x2  CommonMode.o [5]
+  .rodata                const     0x800'07d4         4    0xd4  Led.o [4]
+  .text                  ro code   0x800'08a8         2    0x38  zero_init3.o [9]
+  Initializer bytes      const     0x800'08e0         4    0x34  <for P2-1>
+  .text                  ro code   0x800'0914         4    0x2a  data_init.o [9]
+  .rodata                const     0x800'0940         4    0x24  Led.o [4]
+  .rodata                const     0x800'0964         4    0x24  main.o [1]
+  .text                  ro code   0x800'0988         4    0x22  fpinit_M.o [8]
+  .iar.init_table        const     0x800'09ac         4    0x28  - Linker created -
+  .text                  ro code   0x800'09d4         4    0x20  cmain_call_ctors.o [9]
+  .text                  ro code   0x800'09f4         4    0x18  cppinit.o [6]
+  .text                  ro code   0x800'0a0c         4    0x1e  cmain.o [9]
+  .text                  ro code   0x800'0a2a         2     0x4  exit.o [6]
+  .text                  ro code   0x800'0a30         4     0xa  cexit.o [9]
+  .text                  ro code   0x800'0a3a         2    0x12  startupF411RE.o [1]
+  .rodata                const     0x800'0a4c         4    0x10  ChessMode.o [5]
+  .rodata                const     0x800'0a5c         4    0x10  CommonMode.o [5]
+  .rodata                const     0x800'0a6c         4    0x10  FadeGlowMode.o [5]
+  .rodata                const     0x800'0a7c         4    0x10  Led.o [4]
+  .rodata                const     0x800'0a8c         4    0x10  ModeController.o [3]
+  .rodata                const     0x800'0a9c         4    0x10  RunningLightMode.o [5]
+  .text                  ro code   0x800'0aac         4    0x10  main.o [1]
+  .text                  ro code   0x800'0abc         4    0x10  main.o [1]
+  .text                  ro code   0x800'0acc         4    0x10  main.o [1]
+  .rodata                const     0x800'0adc         4     0xc  UserButton.o [2]
+  .text                  ro code   0x800'0ae8         2     0x6  main.o [1]
+  .text                  ro code   0x800'0aee         2     0x6  main.o [1]
+  .text                  ro code   0x800'0af4         2     0x4  xpurevirtual.o [6]
+  SHT$$PREINIT_ARRAY               0x800'0af8               0x0  <Block>
+  SHT$$INIT_ARRAY                  0x800'0af8               0x4  <Block>
+    .init_array          const     0x800'0af8         4     0x4  main.o [1]
+  __iar_tls$$INIT_ARRAY            0x800'0afc               0x0  <Block>
+  .rodata                const     0x800'0afc               0x0  zero_init3.o [9]
+  .rodata                const     0x800'0afc               0x0  copy_init3.o [9]
+                                 - 0x800'0afc             0x964
+
+"P2", part 1 of 3:                                         0x34
+  P2-1                            0x2000'0000         4    0x34  <Init block>
+    .data                inited   0x2000'0000         4     0x8  main.o [1]
+    .data                inited   0x2000'0008         4    0x10  main.o [1]
+    .data                inited   0x2000'0018         4    0x10  main.o [1]
+    .data                inited   0x2000'0028         4     0xc  main.o [1]
+                                - 0x2000'0034              0x34
+
+"P2", part 2 of 3:                                         0x84
+  .bss                   zero     0x2000'0034         4    0x14  main.o [1]
+  .bss                   zero     0x2000'0048         4    0x14  main.o [1]
+  .bss                   zero     0x2000'005c         4    0x10  main.o [1]
+  .bss                   zero     0x2000'006c         4    0x10  main.o [1]
+  .bss                   zero     0x2000'007c         4    0x10  main.o [1]
+  .bss                   zero     0x2000'008c         4    0x10  main.o [1]
+  .bss                   zero     0x2000'009c         4    0x10  main.o [1]
+  .bss                   zero     0x2000'00ac         4     0xc  main.o [1]
+                                - 0x2000'00b8              0x84
+
+"P2", part 3 of 3:                                       0x1000
+  CSTACK                          0x2000'00b8         8  0x1000  <Block>
+    CSTACK               uninit   0x2000'00b8            0x1000  <Block tail>
+                                - 0x2000'10b8            0x1000
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+   0x800'0afc   0x807'ffff  0x7'f504
+  0x2000'10b8  0x2001'ffff  0x1'ef48
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x84:
+          0x2000'0034  0x84
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x34:
+           0x800'08e0  0x34
+    1 destination range, total size 0x34:
+          0x2000'0000  0x34
+
+Extra (__iar_cstart_call_ctors)
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module              ro code  ro data  rw data
+    ------              -------  -------  -------
+command line/config:
+    ---------------------------------------------
+    Total:
+
+D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение измерительных процессов\lab2\Lab1\Debug\Obj: [1]
+    main.o                  412       92      184
+    startupF411RE.o          18      408
+    ---------------------------------------------
+    Total:                  430      500      184
+
+D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение измерительных процессов\lab2\Lab1\Debug\Obj\Button_16955066607175535019.dir: [2]
+    UserButton.o             68       12
+    ---------------------------------------------
+    Total:                   68       12
+
+D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение измерительных процессов\lab2\Lab1\Debug\Obj\LcdController_17721151500262453669.dir: [3]
+    ModeController.o        144       16
+    ---------------------------------------------
+    Total:                  144       16
+
+D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение измерительных процессов\lab2\Lab1\Debug\Obj\Led_14876625504071601537.dir: [4]
+    Led.o                   164      264
+    ---------------------------------------------
+    Total:                  164      264
+
+D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение измерительных процессов\lab2\Lab1\Debug\Obj\Mode_16823006984759215243.dir: [5]
+    ChessMode.o             146       16
+    CommonMode.o            264       16        1
+    FadeGlowMode.o          264       16        1
+    RunningLightMode.o       74       16
+    ---------------------------------------------
+    Total:                  748       64        2
+
+dl7M_tln.a: [6]
+    abort.o                   6
+    cppinit.o                24
+    exit.o                    4
+    xpurevirtual.o            4
+    ---------------------------------------------
+    Total:                   38
+
+dlpprt7M_tl_nc.a: [7]
+    ---------------------------------------------
+    Total:
+
+m7M_tls.a: [8]
+    fpinit_M.o               34
+    ---------------------------------------------
+    Total:                   34
+
+rt7M_tl.a: [9]
+    cexit.o                  10
+    cmain.o                  30
+    cmain_call_ctors.o       32
+    copy_init3.o             42
+    data_init.o              42
+    zero_init3.o             56
+    ---------------------------------------------
+    Total:                  212
+
+shb_l.a: [10]
+    ABIassert.o              36
+    exit.o                   20
+    unwind_debug.o                     1
+    ---------------------------------------------
+    Total:                   56        1
+
+    Gaps                     13        6
+    Linker created                    40    4'096
+-------------------------------------------------
+    Grand Total:          1'907      903    4'282
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'09ac          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'09d4          --   Gb  - Linker created -
+?main                    0x800'0a0d         Code  Gb  cmain.o [9]
+CSTACK$$Base            0x2000'00b8          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'10b8          --   Gb  - Linker created -
+ChessMode::ChessMode(std::array<ILedToggable *, (unsigned int)4> const &, const std::array<ILedOnOff *, (unsigned int)4>&)
+                         0x800'04a9   0x1e  Code  Gb  ChessMode.o [5]
+ChessMode::Execute()     0x800'04cd   0x56  Code  Gb  ChessMode.o [5]
+CommonMode::CommonMode(std::array<ILedToggable *, (unsigned int)4> const &, const std::array<ILedOnOff *, (unsigned int)4>&)
+                         0x800'05e5   0x1e  Code  Gb  CommonMode.o [5]
+CommonMode::CommonMode(std::array<ILedToggable *, (unsigned int)4> const &, const std::array<ILedOnOff *, (unsigned int)4>&) [subobject]
+                         0x800'05d9    0xc  Code  Gb  CommonMode.o [5]
+CommonMode::Init()       0x800'0609   0x42  Code  Gb  CommonMode.o [5]
+DummyModule::handler()   0x800'0a3b    0x2  Code  Gb  startupF411RE.o [1]
+FadeGlowMode::Execute()
+                         0x800'044d   0x5a  Code  Gb  FadeGlowMode.o [5]
+FadeGlowMode::FadeGlowMode(std::array<ILedToggable *, (unsigned int)4> const &, const std::array<ILedOnOff *, (unsigned int)4>&)
+                         0x800'042d   0x1a  Code  Gb  FadeGlowMode.o [5]
+IButton::IButton()       0x800'06d9    0x2  Code  Wk  UserButton.o [2]
+IButton::IButton() [subobject]
+                         0x800'058f    0xc  Code  Wk  UserButton.o [2]
+IController::IController()
+                         0x800'077f    0x2  Code  Wk  ModeController.o [3]
+IController::IController() [subobject]
+                         0x800'06bb    0xc  Code  Wk  ModeController.o [3]
+ILedOnOff *const  * std::_Addressof<ILedOnOff *const >(ILedOnOff *const  &, std::integral_constant<bool, (bool)0>)
+                         0x800'07d1    0x2  Code  Wk  CommonMode.o [5]
+ILedOnOff *const  * std::addressof<ILedOnOff *const >(ILedOnOff *const  &)
+                         0x800'07a1   0x14  Code  Wk  CommonMode.o [5]
+ILedOnOff::ILedOnOff()   0x800'06dd    0x2  Code  Wk  Led.o [4]
+ILedOnOff::ILedOnOff() [subobject]
+                         0x800'05a7    0xc  Code  Wk  Led.o [4]
+ILedToggable *const  * std::_Addressof<ILedToggable *const >(ILedToggable *const  &, std::integral_constant<bool, (bool)0>)
+                         0x800'07cf    0x2  Code  Wk  FadeGlowMode.o [5]
+ILedToggable *const  * std::addressof<ILedToggable *const >(ILedToggable *const  &)
+                         0x800'0751   0x14  Code  Wk  FadeGlowMode.o [5]
+ILedToggable::ILedToggable()
+                         0x800'06db    0x2  Code  Wk  Led.o [4]
+ILedToggable::ILedToggable() [subobject]
+                         0x800'059b    0xc  Code  Wk  Led.o [4]
+IMode::IMode()           0x800'079d    0x2  Code  Wk  CommonMode.o [5]
+IMode::IMode() [subobject]
+                         0x800'06e5    0xc  Code  Wk  CommonMode.o [5]
+Led::Led(unsigned int, unsigned int)
+                         0x800'0359   0x2a  Code  Gb  Led.o [4]
+Led::Off() const         0x800'03cf   0x12  Code  Gb  Led.o [4]
+Led::On() const          0x800'03bb   0x12  Code  Gb  Led.o [4]
+Led::Toggle() const      0x800'0383   0x2a  Code  Gb  Led.o [4]
+ModeController::ModeController(std::array<IMode *, (unsigned int)3> const &)
+                         0x800'0525   0x22  Code  Gb  ModeController.o [3]
+ModeController::RunCurrentMode()
+                         0x800'0579   0x16  Code  Gb  ModeController.o [3]
+ModeController::SwitchMode()
+                         0x800'054d   0x2c  Code  Gb  ModeController.o [3]
+OptimizedLed<(unsigned int)1073872916, (unsigned int)5>::Off() const
+                         0x800'0acd   0x10  Code  Wk  main.o [1]
+OptimizedLed<(unsigned int)1073872916, (unsigned int)5>::On() const
+                         0x800'0abd   0x10  Code  Wk  main.o [1]
+OptimizedLed<(unsigned int)1073872916, (unsigned int)5>::Toggle() const
+                         0x800'0aad   0x10  Code  Wk  main.o [1]
+Region$$Table$$Base      0x800'09ac          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'09d4          --   Gb  - Linker created -
+RunningLightMode::Execute()
+                         0x800'0401   0x2a  Code  Gb  RunningLightMode.o [5]
+RunningLightMode::RunningLightMode(std::array<ILedToggable *, (unsigned int)4> const &, const std::array<ILedOnOff *, (unsigned int)4>&)
+                         0x800'03e1   0x1a  Code  Gb  RunningLightMode.o [5]
+SHT$$INIT_ARRAY$$Base    0x800'0af8          --   Gb  - Linker created -
+SHT$$INIT_ARRAY$$Limit   0x800'0afc          --   Gb  - Linker created -
+SHT$$PREINIT_ARRAY$$Base
+                         0x800'0af8          --   Gb  - Linker created -
+SHT$$PREINIT_ARRAY$$Limit
+                         0x800'0af8          --   Gb  - Linker created -
+Thunk for (offset -4) Led::Off() const
+                         0x800'03cd    0x2  Code  Gb  Led.o [4]
+Thunk for (offset -4) Led::On() const
+                         0x800'03b9    0x2  Code  Gb  Led.o [4]
+Thunk for (offset -4) OptimizedLed<(unsigned int)1073872916, (unsigned int)5>::Off() const
+                         0x800'0aef    0x6  Code  Wk  main.o [1]
+Thunk for (offset -4) OptimizedLed<(unsigned int)1073872916, (unsigned int)5>::On() const
+                         0x800'0ae9    0x6  Code  Wk  main.o [1]
+UserButton::UserButton(unsigned int, unsigned int)
+                         0x800'02f9   0x1a  Code  Gb  UserButton.o [2]
+UserButton::WasPressed() const
+                         0x800'0319   0x16  Code  Gb  UserButton.o [2]
+Virtual function table for ChessMode
+                         0x800'0a4c   0x10  Data  Wk  ChessMode.o [5]
+Virtual function table for CommonMode
+                         0x800'0a5c   0x10  Data  Wk  CommonMode.o [5]
+Virtual function table for FadeGlowMode
+                         0x800'0a6c   0x10  Data  Wk  FadeGlowMode.o [5]
+Virtual function table for Led
+                         0x800'0940   0x24  Data  Wk  Led.o [4]
+Virtual function table for ModeController
+                         0x800'0a8c   0x10  Data  Wk  ModeController.o [3]
+Virtual function table for OptimizedLed<(unsigned int)1073872916, (unsigned int)5>
+                         0x800'0964   0x24  Data  Wk  main.o [1]
+Virtual function table for RunningLightMode
+                         0x800'0a9c   0x10  Data  Wk  RunningLightMode.o [5]
+Virtual function table for UserButton
+                         0x800'0adc    0xc  Data  Wk  UserButton.o [2]
+__aeabi_assert           0x800'05b5   0x24  Code  Gb  ABIassert.o [10]
+__call_ctors             0x800'09f5   0x18  Code  Gb  cppinit.o [6]
+__cmain                  0x800'0a0d         Code  Gb  cmain.o [9]
+__cxa_pure_virtual       0x800'0af5    0x4  Code  Gb  xpurevirtual.o [6]
+__exit                   0x800'0789   0x14  Code  Gb  exit.o [10]
+__iar_copy_init3         0x800'032f   0x2a  Code  Gb  copy_init3.o [9]
+__iar_cstart_call_ctors
+                         0x800'09d5   0x20  Code  Gb  cmain_call_ctors.o [9]
+__iar_data_init3         0x800'0915   0x18  Code  Gb  data_init.o [9]
+__iar_debug_exceptions   0x800'04a6    0x1  Data  Gb  unwind_debug.o [10]
+__iar_init_vfp           0x800'0989         Code  Gb  fpinit_M.o [8]
+__iar_program_start      0x800'0a3d   0x10  Code  Gb  startupF411RE.o [1]
+__iar_tls$$INIT_ARRAY$$Base
+                         0x800'0afc          --   Gb  - Linker created -
+__iar_tls$$INIT_ARRAY$$Limit
+                         0x800'0afc          --   Gb  - Linker created -
+__iar_zero_init3         0x800'08a9   0x38  Code  Gb  zero_init3.o [9]
+__low_level_init         0x800'01f1   0x48  Code  Gb  main.o [1]
+__sti__routine           0x800'0199   0x58  Code  Lc  main.o [1]
+__vector_table           0x800'0000  0x198  Data  Gb  startupF411RE.o [1]
+_call_main               0x800'0a19         Code  Gb  cmain.o [9]
+_exit                    0x800'0a31         Code  Gb  cexit.o [9]
+abort                    0x800'06df    0x6  Code  Gb  abort.o [6]
+chessMode               0x2000'0034   0x14  Data  Gb  main.o [1]
+decltype(((param#1.size)())) std::size<std::array<ILedToggable *, (unsigned int)4>>(std::array<ILedToggable *, (unsigned int)4> const &)
+                         0x800'0651    0xc  Code  Wk  ChessMode.o [5]
+decltype(((param#1.size)())) std::size<std::array<IMode *, (unsigned int)3>>(std::array<IMode *, (unsigned int)3> const &)
+                         0x800'06c7    0xc  Code  Wk  ModeController.o [3]
+delay(int)               0x800'0239    0xc  Code  Gb  main.o [1]
+exit                     0x800'0a2b    0x4  Code  Gb  exit.o [6]
+fadeGlowMode            0x2000'009c   0x10  Data  Gb  main.o [1]
+led1                    0x2000'005c   0x10  Data  Gb  main.o [1]
+led2                    0x2000'006c   0x10  Data  Gb  main.o [1]
+led3                    0x2000'007c   0x10  Data  Gb  main.o [1]
+led4                    0x2000'0000    0x8  Data  Gb  main.o [1]
+leds                    0x2000'0008   0x10  Data  Gb  main.o [1]
+ledsOnOff               0x2000'0018   0x10  Data  Gb  main.o [1]
+main                     0x800'0245   0x62  Code  Gb  main.o [1]
+modeController          0x2000'0048   0x14  Data  Gb  main.o [1]
+modes                   0x2000'0028    0xc  Data  Gb  main.o [1]
+runningLightMode        0x2000'008c   0x10  Data  Gb  main.o [1]
+std::_Array_const_iterator<ILedOnOff *, (unsigned int)4>::_Array_const_iterator(ILedOnOff *const *, unsigned int)
+                         0x800'07b5    0x8  Code  Wk  CommonMode.o [5]
+std::_Array_const_iterator<ILedOnOff *, (unsigned int)4>::operator !=(const std::_Array_const_iterator<ILedOnOff *, (unsigned int)4>&) const
+                         0x800'0721   0x1c  Code  Wk  CommonMode.o [5]
+std::_Array_const_iterator<ILedOnOff *, (unsigned int)4>::operator *() const
+                         0x800'073d    0x4  Code  Wk  CommonMode.o [5]
+std::_Array_const_iterator<ILedOnOff *, (unsigned int)4>::operator ++()
+                         0x800'0741    0x8  Code  Wk  CommonMode.o [5]
+std::_Array_const_iterator<ILedOnOff *, (unsigned int)4>::operator ==(const std::_Array_const_iterator<ILedOnOff *, (unsigned int)4>&) const
+                         0x800'07bd   0x12  Code  Wk  CommonMode.o [5]
+std::_Array_const_iterator<ILedToggable *, (unsigned int)4>::_Array_const_iterator(ILedToggable *const *, unsigned int)
+                         0x800'0765    0x8  Code  Wk  FadeGlowMode.o [5]
+std::_Array_const_iterator<ILedToggable *, (unsigned int)4>::operator !=(const std::_Array_const_iterator<ILedToggable *, (unsigned int)4>&) const
+                         0x800'068d   0x1c  Code  Wk  FadeGlowMode.o [5]
+std::_Array_const_iterator<ILedToggable *, (unsigned int)4>::operator *() const
+                         0x800'06a9    0x4  Code  Wk  FadeGlowMode.o [5]
+std::_Array_const_iterator<ILedToggable *, (unsigned int)4>::operator ++()
+                         0x800'06ad    0x8  Code  Wk  FadeGlowMode.o [5]
+std::_Array_const_iterator<ILedToggable *, (unsigned int)4>::operator ==(const std::_Array_const_iterator<ILedToggable *, (unsigned int)4>&) const
+                         0x800'076d   0x12  Code  Wk  FadeGlowMode.o [5]
+std::array<ILedOnOff *, (unsigned int)4>::begin() const
+                         0x800'06f1   0x18  Code  Wk  CommonMode.o [5]
+std::array<ILedOnOff *, (unsigned int)4>::end() const
+                         0x800'0709   0x18  Code  Wk  CommonMode.o [5]
+std::array<ILedOnOff *, (unsigned int)4>::operator [](unsigned int) const
+                         0x800'06b5    0x6  Code  Wk  ChessMode.o [5]
+std::array<ILedToggable *, (unsigned int)4>::begin() const
+                         0x800'065d   0x18  Code  Wk  FadeGlowMode.o [5]
+std::array<ILedToggable *, (unsigned int)4>::end() const
+                         0x800'0675   0x18  Code  Wk  FadeGlowMode.o [5]
+std::array<ILedToggable *, (unsigned int)4>::operator [](unsigned int) const
+                         0x800'064b    0x6  Code  Wk  FadeGlowMode.o [5]
+std::array<ILedToggable *, (unsigned int)4>::size() const
+                         0x800'0749    0x6  Code  Wk  ChessMode.o [5]
+std::array<IMode *, (unsigned int)3>::operator [](unsigned int) const
+                         0x800'06d3    0x6  Code  Wk  ModeController.o [3]
+std::array<IMode *, (unsigned int)3>::size() const
+                         0x800'0781    0x6  Code  Wk  ModeController.o [3]
+userButton              0x2000'00ac    0xc  Data  Gb  main.o [1]
+
+
+[1] = D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение измерительных процессов\lab2\Lab1\Debug\Obj
+[2] = D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение измерительных процессов\lab2\Lab1\Debug\Obj\Button_16955066607175535019.dir
+[3] = D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение измерительных процессов\lab2\Lab1\Debug\Obj\LcdController_17721151500262453669.dir
+[4] = D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение измерительных процессов\lab2\Lab1\Debug\Obj\Led_14876625504071601537.dir
+[5] = D:\РАБОЧИЙ СТОЛ\Обучение\ЮУрГУ\Четвертый курс\Программное обеспечение измерительных процессов\lab2\Lab1\Debug\Obj\Mode_16823006984759215243.dir
+[6] = dl7M_tln.a
+[7] = dlpprt7M_tl_nc.a
+[8] = m7M_tls.a
+[9] = rt7M_tl.a
+[10] = shb_l.a
+
+  1'907 bytes of readonly  code memory
+    903 bytes of readonly  data memory
+  4'282 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
