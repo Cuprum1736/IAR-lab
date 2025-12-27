@@ -184,46 +184,62 @@ RCC::CR::HSION::Off::Set();
 
 Для подбора коэффициентов необходимо воспользоваться формулами. См. рис 2. <<pll_freq_conf>>
 
-=== Настройка PLL:
+Настройка HSE::
 
-[source,c++]
+[source, cpp]
 ----
-RCC::PLLCFGR::PLLM::Set(2U);     // M = 2 
-RCC::PLLCFGR::PLLN::Set(64U);    // N = 64 
-RCC::PLLCFGR::PLLP::Set(3U);     // P = 8
-----
+  RCC::CR::HSEON::On::Set(); // <1>
+  while (RCC::CR::HSERDY::NotReady::IsSet()) // <2> 
+  {
 
-==== Переключение на PLL:
+  }
+  RCC::CFGR::SW::Hse::Set(); //<3>
+  while (!RCC::CFGR::SWS::Hse::IsSet())//<4>
+  {
 
-[source,c++]
-----
-RCC::CFGR::SW::Pll::Set();
-while (!RCC::CFGR::SWS::Pll::IsSet()) {}
-----
-Переключает систему на работу от PLL и ждёт подтверждения.
-
-
-=== Реализация с HSE
-
-[source,c++]
-----
-RCC::CR::HSEON::On::Set();          // Включаем ВНЕШНИЙ кварц
-while (RCC::CR::HSERDY::NotReady::IsSet()) {} // Ждём его готовности
-RCC::CR::HSION::Off::Set();         // Выключаем ВНУТРЕННИЙ генератор
-RCC::PLLCFGR::PLLSRC::HseSource::Set(); // PLL работает от HSE
-RCC::PLLCFGR::PLLM::Set(2U);        // Делитель для 8 МГц HSE
+  }
+  RCC::CR::HSION::Off::Set(); //<5> 
 ----
 
-=== Реализация с HSI
+. включили;
 
-[source,c++]
+. проверили включение;
+
+. перекинули ключ SW на HSE;
+
+. проверили, что ключ переключился;
+
+. отключили HSI;
+
+Выполним настройку PLL.
+
+Настройка PLL на 36 МГц на основе HSE::
+
+[source, cpp]
 ----
-RCC::CR::HSION::On::Set();          // Включаем ВНУТРЕННИЙ генератор  
-while (RCC::CR::HSIRDY::NotReady::IsSet()) {} // Ждём его готовности
-RCC::CR::HSEON::Off::Set();         // Выключаем ВНЕШНИЙ кварц
-RCC::PLLCFGR::PLLSRC::HsiSource::Set(); // PLL работает от HSI
-RCC::PLLCFGR::PLLM::Set(8U);        // Делитель для 16 МГц HSI
+  RCC::PLLCFGR::PLLSRC::HseSource::Set(); //1
+  
+  RCC::PLLCFGR::PLLN0::Set(64); // n = 64
+  RCC::PLLCFGR::PLLP0::Set(3); // p = 8
+  RCC::PLLCFGR::FieldValues::Set(2); // m = 2
+  //2
+ RCC::CR::PLLON::On::Set(); //3
+  while (RCC::CR::PLLRDY::Unclocked::IsSet()) //4
+  {
+
+  }
+  RCC::CFGR::SW::Pll::Set(); //5
+  while (!RCC::CFGR::SWS::Pll::IsSet()) //6
+  {
+
+  }
 ----
+. настроили источник ФАПЧ на HSE;
+. определили коэффициенты;
+. включили;
+. проверили, что включили;
+. перевели SW на PLL;
+. проверили, что перевели;
 
 
 
