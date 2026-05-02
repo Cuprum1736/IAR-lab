@@ -1,3 +1,4 @@
+include::titlearh.adoc[]
 
 [plantuml, "test2", png]
 ----

@@ -9,6 +9,7 @@
 :doctype: book
 :eqnums:
 :equation-caption: формула
+include::titleanaliz.adoc[]
 
 toc::[]
 
