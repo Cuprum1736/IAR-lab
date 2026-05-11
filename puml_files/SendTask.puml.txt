@@ -1,0 +1,50 @@
+@startuml
+class SendTask
+{
+    - mDataProviders: std::vector<IFloatDataProvider*>
+    + Run(): void
+}
+
+interface IFloatDataProvider
+{
+    {abstract} float GetFloatData()
+}
+
+class Temperature
+{
+    + GetFloatData(): float
+}
+
+class Humidity
+{
+    + GetFloatData(): float
+}
+
+class Pressure
+{
+    + GetFloatData(): float
+}
+
+class CalcDewPoint
+{
+    + GetFloatData(): float
+}
+
+IFloatDataProvider <|.. Temperature
+IFloatDataProvider <|.. Humidity
+IFloatDataProvider <|.. Pressure
+IFloatDataProvider <|.. CalcDewPoint
+
+SendTask o-- "1..*" IFloatDataProvider : mDataProviders
+
+note bottom of SendTask
+  Агрегация: один SendTask содержит
+  массив ссылок (1..*) на IFloatDataProvider
+end note
+
+note bottom of IFloatDataProvider
+  Четыре реализации: Temperature,
+  Humidity, Pressure, CalcDewPoint
+end note
+
+@enduml

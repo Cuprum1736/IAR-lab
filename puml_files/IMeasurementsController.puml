@@ -1,0 +1,58 @@
+@startuml
+interface IMeasurementsController
+{
+    {abstract} void Update()
+}
+
+class BME280
+{
+    - mI2C: II2C*
+    - mDataT: IData*
+    - mDataH: IData*
+    - mDataP: IData*
+    + Init(): void
+    + Update(): void
+}
+
+interface IBME280Repository
+{
+    {abstract} int GetTemperatureData()
+    {abstract} int SetTemperatureData()
+    {abstract} int GetHumidityData()
+    {abstract} int SetHumidityData()
+    {abstract} int GetPressureData()
+    {abstract} int SetPressureData()
+}
+
+class Repository
+{
+    + GetTemperatureData(): int
+    + SetTemperatureData(): int
+    + GetHumidityData(): int
+    + SetHumidityData(): int
+    + GetPressureData(): int
+    + SetPressureData(): int
+}
+
+IMeasurementsController <|.. BME280
+IBME280Repository <|.. Repository
+BME280 o.. IBME280Repository
+
+note bottom of IMeasurementsController
+  Запускает полный цикл измерения BME280
+end note
+
+note bottom of BME280
+  Драйвер датчика BME280.
+  Читает регистры, отправляет данные в Repository
+end note
+
+note bottom of IBME280Repository
+  Интерфейс доступа к данным BME280
+end note
+
+note bottom of Repository
+  Реализация доступа к данным BME280
+end note
+
+@enduml
