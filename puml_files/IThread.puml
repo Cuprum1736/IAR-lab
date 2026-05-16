@@ -1,18 +1,14 @@
-[plantuml, "test2", png]
-----
 @startuml
 interface IThread
 {
     {abstract} void Run()
 }
 
+
 class MeasureTask
 {
     - mController: IMeasurementsController*
-    - mUpdateT: IMeasurementsUpdate*
-    - mUpdateH: IMeasurementsUpdate*
-    - mUpdateP: IMeasurementsUpdate*
-    - mUpdatePoint: IMeasurementsUpdate*
+    - mUpdates: std::array<IMeasurementsUpdate*, 4>
     + Run(): void
 }
 
@@ -41,5 +37,13 @@ note bottom of SendTask
   Форматирует и отправляет данные по USART
 end note
 
+note right of MeasureTask
+  <b>mUpdates[4]:</b>
+  [0] - Temperature
+  [1] - Humidity
+  [2] - Pressure
+  [3] - Dew Point (Точка росы)
+  
+  Массив обходится с нулевого элемента (index 0)
+end note
 @enduml
-----

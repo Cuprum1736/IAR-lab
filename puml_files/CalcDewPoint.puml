@@ -1,6 +1,4 @@
-[plantuml, "CalcDewPoint", png]
-----
-@startuml CalcDewPoint
+@startuml
 class CalcDewPoint
 {
     - mTemp: ITemperature*
@@ -39,9 +37,9 @@ interface IPressure
 
 CalcDewPoint --|> IMeasurementsUpdate
 CalcDewPoint --|> IFloatDataProvider
-CalcDewPoint --> ITemperature : mTemp
-CalcDewPoint --> IHumidity : mHum
-CalcDewPoint --> IPressure : mPres
+CalcDewPoint o-- ITemperature : mTemp
+CalcDewPoint o-- IHumidity : mHum
+CalcDewPoint o-- IPressure : mPres
 
 note bottom of IMeasurementsUpdate
   Вычисляет точку росы по формуле Магнуса
@@ -63,4 +61,3 @@ note bottom of IPressure
   Получает давление (опционально)
 end note
 @enduml
-----
