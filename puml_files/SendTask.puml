@@ -1,0 +1,60 @@
+@startuml
+interface ITransfer
+{
+    {abstract} void Send(const std::string& data)
+}
+
+class Usart
+{
+    + Send(const std::string& data): void
+}
+
+interface IFormater
+{
+    {abstract} std::string Format(const std::array<VariableType, 4>& data)
+}
+
+class Formater
+{
+    + Format(data): std::string
+}
+
+class SendTask
+{
+    - mDataProviders: std::vector<IFloatDataProvider*>
+    + Run(): void
+}
+
+interface IFloatDataProvider
+{
+    {abstract} float GetFloatData()
+}
+
+SendTask o-- "1..*" IFloatDataProvider : mDataProviders
+SendTask o-- "1..*" IFormater: mDataProviders
+SendTask o-- "1..*" ITransfer: mDataProviders
+
+IFormater <|.. Formater
+
+note bottom of IFormater
+  Интерфейс для форматирования данных в строку
+end note
+
+note bottom of Formater
+  Форматирует 4 величины в строку по ТЗ:
+  "Давление: XXX.XX гПа Влажность: XXX.XX %
+   Температура: XXX.XX C Точка росы: XXX.XX C\r\n"
+end note
+
+ITransfer <|.. Usart
+
+note bottom of ITransfer
+  Интерфейс для передачи данных
+end note
+
+note bottom of Usart
+  Отправка данных через USART2.
+  Скорость 9600 бод, 8 бит, 1 стоп-бит.
+  Подключён к Bluetooth HC-06
+end note
+@enduml

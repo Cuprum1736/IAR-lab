@@ -1,0 +1,52 @@
+@startuml
+class Humidity
+{
+    - repository: IBME280Repository*
+    - humidityValue: float
+    + UpdateCalc(): void
+    + GetHumidity(): float
+    + GetFloatData(): float
+}
+
+interface IHumidity
+{
+    {abstract} float GetHumidity()
+}
+
+interface IBME280Repository
+{
+    {abstract} int GetHumidityData()
+    {abstract} int SetHumidityData()
+}
+
+interface IMeasurementsUpdate
+{
+    {abstract} void UpdateCalc()
+}
+
+interface IFloatDataProvider
+{
+    {abstract} float GetFloatData()
+}
+
+Humidity --|> IHumidity
+Humidity o.. IBME280Repository
+Humidity --|> IFloatDataProvider
+Humidity --|> IMeasurementsUpdate
+
+note bottom of IHumidity
+  Возвращает влажность в %
+end note
+
+note bottom of IBME280Repository
+  Читает и записывает сырые данные влажности
+end note
+
+note bottom of IMeasurementsUpdate
+  Вычисляет влажность по формуле
+end note
+
+note bottom of IFloatDataProvider
+  Возвращает влажность для форматирования
+end note
+@enduml

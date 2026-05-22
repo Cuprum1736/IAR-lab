@@ -1,0 +1,63 @@
+@startuml
+class CalcDewPoint
+{
+    - mTemp: ITemperature*
+    - mHum: IHumidity*
+    - mPres: IPressure*
+    - dewPointValue: float
+    + UpdateCalc(): void
+    + GetDewPoint(): float
+    + GetFloatData(): float
+}
+
+interface IMeasurementsUpdate
+{
+    {abstract} void UpdateCalc()
+}
+
+interface IFloatDataProvider
+{
+    {abstract} float GetFloatData()
+}
+
+interface ITemperature
+{
+    {abstract} float GetTemperature()
+}
+
+interface IHumidity
+{
+    {abstract} float GetHumidity()
+}
+
+interface IPressure
+{
+    {abstract} float GetPressure()
+}
+
+CalcDewPoint --|> IMeasurementsUpdate
+CalcDewPoint --|> IFloatDataProvider
+CalcDewPoint o-- ITemperature : mTemp
+CalcDewPoint o-- IHumidity : mHum
+CalcDewPoint o-- IPressure : mPres
+
+note bottom of IMeasurementsUpdate
+  Вычисляет точку росы по формуле Магнуса
+end note
+
+note bottom of IFloatDataProvider
+  Возвращает точку росы для форматирования
+end note
+
+note bottom of ITemperature
+  Получает температуру для расчёта
+end note
+
+note bottom of IHumidity
+  Получает влажность для расчёта
+end note
+
+note bottom of IPressure
+  Получает давление (опционально)
+end note
+@enduml

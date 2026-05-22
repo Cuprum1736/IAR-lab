@@ -1,0 +1,25 @@
+@startuml
+interface II2C
+{
+    {abstract} bool WriteByte(addr, reg, data)
+    {abstract} bool ReadBytes(addr, reg, buf, len)
+}
+
+class I2C
+{
+    + WriteByte(addr, reg, data): bool
+    + ReadBytes(addr, reg, buf, len): bool
+}
+
+II2C <|.. I2C
+
+note bottom of II2C
+  Интерфейс для работы с шиной I2C
+end note
+
+note bottom of I2C
+  Реализация I2C для STM32F411RE.
+  Частота 100 кГц, пины PB6 (SCL), PB7 (SDA)
+end note
+
+@enduml
