@@ -1,0 +1,76 @@
+@startuml
+title Текущая архитектура (как есть, по полному коду)
+
+interface ISensor
+interface IFilter
+interface ICalculator
+interface IDisplay
+interface ILedIndicator
+interface ILogger
+
+class BME280
+class LowPassFilter
+class SpeedCalculator
+class LiquidCrystal_I2C
+class LEDIndicator
+class UARTLogger
+class UARTFormatter
+class SharedData <<struct>>
+
+class SensorTask
+class DisplayTask
+class LedTask
+class UartTask
+
+class SensorTaskContext <<struct>>
+class UartTaskContext <<struct>>
+class LedTaskContext <<struct>>
+class DisplayTaskContext <<struct>>
+
+class "I2C" as I2C <<module>>
+class "USART" as USART <<module/static>>
+
+ISensor <|.. BME280
+IFilter <|.. LowPassFilter
+ICalculator <|.. SpeedCalculator
+IDisplay <|.. LiquidCrystal_I2C
+ILedIndicator <|.. LEDIndicator
+ILogger <|.. UARTLogger
+
+BME280 ..> I2C
+LiquidCrystal_I2C ..> I2C
+UARTLogger ..> UARTFormatter
+UARTLogger ..> USART
+
+' --- задачи владеют контекстами, контексты ссылаются на интерфейсы (DI) ---
+SensorTask  ..> SensorTaskContext
+UartTask    ..> UartTaskContext
+LedTask     ..> LedTaskContext
+DisplayTask ..> DisplayTaskContext
+
+SensorTaskContext o-- ISensor
+SensorTaskContext o-- IFilter
+SensorTaskContext o-- ICalculator
+UartTaskContext    o-- ILogger
+LedTaskContext     o-- ILedIndicator
+DisplayTaskContext o-- IDisplay
+
+SensorTask  ..> SharedData : пишет (1 с)
+DisplayTask ..> SharedData : читает (200 мс)
+LedTask     ..> SharedData : читает (50 мс)
+UartTask    ..> SharedData : читает (1 с)
+
+note as N1
+  Поток данных:
+  BME280 --(I2C)--> SensorTask --> g_data --> {
+      DisplayTask --> LCD (LiquidCrystal_I2C),
+      LedTask     --> LED (LEDIndicator),
+      UartTask    --> UARTLogger --> USART2 --> HC-06 / PuTTY
+  }
+
+  main: SystemClock_Config (APB1=4МГц) -> USART::Init(9600)
+        -> I2C_Init -> старт 4 задач -> vTaskStartScheduler
+
+  Все 4 задачи приведены к DI: Task -> TaskContext -> интерфейс
+end note
+@enduml

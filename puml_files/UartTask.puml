@@ -1,0 +1,27 @@
+@startuml
+interface ILogger
+
+class UartTaskContext <<struct>>
+{
+    + logger: ILogger*
+}
+
+class UartTask
+{
+    + UartTask_Start(ILogger&): void
+    + UartTask_Start(): void
+    - UartTaskFunction(void* param): void
+}
+
+class SharedData <<struct>>
+
+UartTaskContext o-- ILogger : logger
+UartTask ..> UartTaskContext
+UartTask ..> SharedData : читает g_data
+
+note bottom of UartTask
+  Период 1 с. Читает g_data под критической секцией,
+  при изменении значения (!= last) логирует через ILogger.
+  Зависимость внедряется через UartTaskContext (DI).
+end note
+@enduml

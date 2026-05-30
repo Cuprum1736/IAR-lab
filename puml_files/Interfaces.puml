@@ -1,0 +1,56 @@
+@startuml
+interface ISensor
+{
+    {abstract} bool Init()
+    {abstract} float ReadTemperature()
+}
+
+interface IFilter
+{
+    {abstract} float Update(float raw_value)
+}
+
+interface ICalculator
+{
+    {abstract} void SetGains(float kp, float ki, float kd)
+    {abstract} void SetOutputLimits(float min, float max)
+    {abstract} float Calculate(float setpoint, float measurement)
+}
+
+interface IDisplay
+{
+    {abstract} void Init()
+    {abstract} void ShowTemperature(float temp)
+    {abstract} void ShowSpeed(float speed)
+    {abstract} void Clear()
+}
+
+interface ILedIndicator
+{
+    {abstract} void Init()
+    {abstract} void Update(float speed)
+}
+
+interface ILogger
+{
+    {abstract} void Init()
+    {abstract} void LogTemperature(float temp)
+    {abstract} void LogPressure(float pressurePa)
+    {abstract} void LogHumidity(float humidity100)
+    {abstract} void LogSpeed(float speed)
+}
+
+note bottom of ISensor
+  Источник данных датчика. Только температура на интерфейсе;
+  давление и влажность вызываются напрямую у BME280.
+end note
+
+note bottom of ICalculator
+  Интерфейс в стиле PID (SetGains/SetOutputLimits/Calculate).
+  В SpeedCalculator SetGains не используется (заглушка).
+end note
+
+note bottom of IDisplay
+  ShowHumidity / ShowPressure закомментированы в коде.
+end note
+@enduml

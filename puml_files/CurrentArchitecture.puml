@@ -1,0 +1,262 @@
+@startuml
+title Текущая архитектура проекта (по реальному коду)
+
+' ============================================================
+'                        ИНТЕРФЕЙСЫ (Interfaces.h)
+' ============================================================
+interface ISensor
+{
+    {abstract} bool Init()
+    {abstract} float ReadTemperature()
+}
+
+interface IFilter
+{
+    {abstract} float Update(float raw_value)
+}
+
+interface ICalculator
+{
+    {abstract} void SetGains(float kp, float ki, float kd)
+    {abstract} void SetOutputLimits(float min, float max)
+    {abstract} float Calculate(float setpoint, float measurement)
+}
+
+interface IDisplay
+{
+    {abstract} void Init()
+    {abstract} void ShowTemperature(float temp)
+    {abstract} void ShowSpeed(float speed)
+    {abstract} void Clear()
+}
+
+interface ILedIndicator
+{
+    {abstract} void Init()
+    {abstract} void Update(float speed)
+}
+
+interface ILogger
+{
+    {abstract} void Init()
+    {abstract} void LogTemperature(float temp)
+    {abstract} void LogPressure(float pressurePa)
+    {abstract} void LogHumidity(float humidity100)
+    {abstract} void LogSpeed(float speed)
+}
+
+' ============================================================
+'                     РЕАЛИЗАЦИИ (драйверы/логика)
+' ============================================================
+class BME280
+{
+    + BME280(uint8_t i2cAddress)
+    + bool Init()
+    + float ReadTemperature()
+    + void begin()
+    + int32_t readTemperature100()
+    + uint32_t readPressure()
+    + uint32_t readHumidity100()
+}
+
+class LowPassFilter
+{
+    + LowPassFilter(float dt, float rc)
+    + float Update(float rawValue)
+}
+
+class SpeedCalculator
+{
+    + SpeedCalculator(float t_min, float t_max)
+    + void SetGains(float kp, float ki, float kd)
+    + void SetOutputLimits(float min, float max)
+    + float Calculate(float setpoint, float measurement)
+}
+
+class LiquidCrystal_I2C
+{
+    + LiquidCrystal_I2C(addr, columns, rows)
+    + void Init()
+    + void ShowTemperature(float temperature)
+    + void ShowSpeed(float speed)
+    + void Clear()
+    + void Backlight()
+}
+
+class LEDIndicator
+{
+    + void Init()
+    + void Update(float speed)
+}
+
+class UARTLogger
+{
+    + void Init()
+    + void LogTemperature(float temperature)
+    + void LogPressure(float pressurePa)
+    + void LogHumidity(float humidity)
+    + void LogSpeed(float speed)
+}
+
+class UARTFormatter
+{
+    + UARTFormatter(int precision_temp, int precision_speed)
+    + FormatTemperature(float, char*): char*
+    + FormatPressure(float, char*): char*
+    + FormatHumidity(float, char*): char*
+    + FormatSpeed(float, char*): char*
+}
+
+ISensor       <|.. BME280
+IFilter       <|.. LowPassFilter
+ICalculator   <|.. SpeedCalculator
+IDisplay      <|.. LiquidCrystal_I2C
+ILedIndicator <|.. LEDIndicator
+ILogger       <|.. UARTLogger
+
+UARTLogger ..> UARTFormatter : форматирует
+
+' ============================================================
+'                    НИЗКИЙ УРОВЕНЬ (модули)
+' ============================================================
+class "I2C" as I2C <<module>>
+{
+    + I2C_Init()
+    + I2C_Start()
+    + I2C_Stop()
+    + uint8_t I2C_WriteByte(uint8_t data)
+    + uint8_t I2C_ReadByte(uint8_t ack)
+    + I2C_DelayMs(uint32_t ms)
+    + I2C_DelayUs(uint32_t us)
+}
+
+class "USART" as USART <<static>>
+{
+    + {static} Init(uint32_t baudrate)
+    + {static} SendChar(char c)
+    + {static} SendString(const char* str)
+}
+
+BME280            ..> I2C   : I2C_Start/WriteByte/ReadByte/Stop
+LiquidCrystal_I2C ..> I2C   : ExpanderWrite через I2C
+UARTLogger        ..> USART : Init / SendChar / SendString
+
+' ============================================================
+'                   ОБЩИЕ ДАННЫЕ (канал между задачами)
+' ============================================================
+class SharedData <<struct>>
+{
+    + volatile float temperature
+    + volatile float speed
+    + volatile float humidity100
+    + volatile float pressurePa
+    + volatile bool  new_data
+}
+
+note bottom of SharedData
+  Глобальный g_data. Защита через
+  taskENTER_CRITICAL / taskEXIT_CRITICAL.
+end note
+
+' ============================================================
+'                          ЗАДАЧИ FreeRTOS
+' ============================================================
+class SensorTaskContext <<struct>>
+{
+    + sensor: ISensor*
+    + filter: IFilter*
+    + calculator: ICalculator*
+}
+
+class UartTaskContext <<struct>>
+{
+    + logger: ILogger*
+}
+
+class LedTaskContext <<struct>>
+{
+    + leds: ILedIndicator*
+}
+
+class DisplayTaskContext <<struct>>
+{
+    + display: IDisplay*
+}
+
+class SensorTask  << (T,#ADD1B2) task >>
+{
+    + SensorTask_Start(ISensor&, IFilter&, ICalculator&)
+    + SensorTask_Start()
+}
+
+class UartTask    << (T,#ADD1B2) task >>
+{
+    + UartTask_Start(ILogger&)
+    + UartTask_Start()
+}
+
+class LedTask     << (T,#ADD1B2) task >>
+{
+    + LedTask_Start(ILedIndicator&)
+    + LedTask_Start()
+}
+
+class DisplayTask << (T,#ADD1B2) task >>
+{
+    + DisplayTask_Start()
+}
+
+' --- задачи владеют контекстами ---
+SensorTask ..> SensorTaskContext
+UartTask   ..> UartTaskContext
+LedTask    ..> LedTaskContext
+DisplayTask ..> DisplayTaskContext
+
+' --- контексты ссылаются на интерфейсы (внедрение зависимостей) ---
+SensorTaskContext o-- ISensor     : sensor
+SensorTaskContext o-- IFilter     : filter
+SensorTaskContext o-- ICalculator : calculator
+UartTaskContext   o-- ILogger     : logger
+LedTaskContext    o-- ILedIndicator : leds
+DisplayTaskContext o-- IDisplay   : display
+
+' --- обмен через g_data ---
+SensorTask  ..> SharedData : пишет (1 с)
+DisplayTask ..> SharedData : читает (200 мс)
+LedTask     ..> SharedData : читает (50 мс)
+UartTask    ..> SharedData : читает (1 с)
+
+' ============================================================
+'                            ЗАМЕТКИ
+' ============================================================
+note bottom of I2C
+  Программный (bit-bang) I2C через GPIOB:
+  PB8 = SCL, PB9 = SDA. Тайминги под APB1 = 4 МГц.
+end note
+
+note bottom of USART
+  USART2, PA2 (TX) / PA3 (RX), 9600 8N1.
+  К нему подключён Bluetooth HC-06.
+end note
+
+note bottom of SpeedCalculator
+  ICalculator в стиле PID, но реализовано
+  линейное отображение T -> скорость 0..100%.
+  setpoint игнорируется, SetGains - заглушка.
+end note
+
+note bottom of SensorTask
+  Порядок: ReadTemperature (tFine_) ->
+  readPressure -> readHumidity100 ->
+  фильтр -> скорость -> запись g_data.
+end note
+
+note as N1
+  Поток данных:
+  BME280 --(I2C)--> SensorTask --> g_data --> {
+    DisplayTask --> LCD,
+    LedTask     --> LED,
+    UartTask    --> UARTLogger --> USART2 --> HC-06 / PuTTY
+  }
+end note
+@enduml

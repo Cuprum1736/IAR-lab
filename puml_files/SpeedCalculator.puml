@@ -1,0 +1,28 @@
+@startuml
+interface ICalculator
+{
+    {abstract} void SetGains(float kp, float ki, float kd)
+    {abstract} void SetOutputLimits(float min, float max)
+    {abstract} float Calculate(float setpoint, float measurement)
+}
+
+class SpeedCalculator
+{
+    - t_min_: float
+    - t_max_: float
+    - out_min_: float
+    - out_max_: float
+    + SpeedCalculator(float t_min, float t_max)
+    + SetGains(float kp, float ki, float kd): void
+    + SetOutputLimits(float min, float max): void
+    + Calculate(float setpoint, float measurement): float
+}
+
+ICalculator <|.. SpeedCalculator
+
+note bottom of SpeedCalculator
+  Линейное отображение температуры в скорость 0..100%:
+  T <= t_min -> 0, T >= t_max -> 100, между - линейно.
+  setpoint игнорируется, SetGains - заглушка.
+end note
+@enduml
