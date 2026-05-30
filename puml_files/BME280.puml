@@ -1,0 +1,43 @@
+@startuml
+interface ISensor
+{
+    {abstract} bool Init()
+    {abstract} float ReadTemperature()
+}
+
+class BME280
+{
+    - address_: uint8_t
+    - digT1_: uint16_t
+    - digT2_, digT3_: int16_t
+    - digP1_: uint16_t
+    - digP2_..digP9_: int16_t
+    - digH1_: uint8_t
+    - digH2_: int16_t
+    - digH3_: uint8_t
+    - digH4_, digH5_: int16_t
+    - digH6_: int8_t
+    - tFine_: int32_t
+    + BME280(uint8_t i2cAddress)
+    + Init(): bool
+    + ReadTemperature(): float
+    + begin(): void
+    + readTemperature100(): int32_t
+    + readPressure(): uint32_t
+    + readHumidity100(): uint32_t
+    - writeReg(reg, value): void
+    - readRegs(reg, buffer, length): void
+    - readCalibrationData(): void
+}
+
+class "I2C" as I2C <<module>>
+
+ISensor <|.. BME280
+BME280 ..> I2C : I2C_Start/WriteByte/ReadByte/Stop
+
+note bottom of BME280
+  Адрес 0x76. Калибровка + компенсация T/P/H по Bosch.
+  tFine_ связывает три расчёта, температуру читают первой.
+  Обмен через программный I2C (свободные функции).
+end note
+@enduml

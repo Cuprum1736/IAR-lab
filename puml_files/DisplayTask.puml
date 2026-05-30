@@ -1,0 +1,64 @@
+@startuml
+interface IDisplay
+{
+    {abstract} void Init()
+    {abstract} void ShowTemperature(float temp)
+    {abstract} void ShowSpeed(float speed)
+    {abstract} void Clear()
+}
+
+class LiquidCrystal_I2C
+{
+    - address_: uint8_t
+    - columns_: uint8_t
+    - rows_: uint8_t
+    - backlight_: uint8_t
+    + LiquidCrystal_I2C(address, columns, rows)
+    + Init(): void
+    + ShowTemperature(float temperature): void
+    + ShowSpeed(float speed): void
+    + Clear(): void
+    + Backlight(): void
+    + NoBacklight(): void
+    + SetCursor(column, row): void
+    + Print(const char* text): void
+    + Print(float number, int decimals): void
+    - ExpanderWrite(uint8_t data): void
+    - PulseEnable(uint8_t data): void
+    - Write4Bits(uint8_t data): void
+    - Send(uint8_t data, uint8_t mode): void
+}
+
+class "I2C" as I2C <<module>>
+
+class DisplayTaskContext <<struct>>
+{
+    + display: IDisplay*
+}
+
+class DisplayTask
+{
+    + DisplayTask_Start(IDisplay&): void
+    + DisplayTask_Start(): void
+    - DisplayTaskFunction(void* param): void
+}
+
+class SharedData <<struct>>
+
+IDisplay <|.. LiquidCrystal_I2C
+LiquidCrystal_I2C ..> I2C : использует
+DisplayTaskContext o-- IDisplay : display
+DisplayTask ..> DisplayTaskContext
+DisplayTask ..> SharedData : читает g_data
+
+note bottom of LiquidCrystal_I2C
+  LCD 16x2, I2C-расширитель PCF8574 @ 0x27, 4-битный режим.
+  Показывает только температуру и скорость.
+end note
+
+note bottom of DisplayTask
+  Период 200 мс. Если g_data.new_data - читает данные,
+  сбрасывает флаг и выводит T и скорость на LCD.
+  Зависимость внедряется через DisplayTaskContext (DI).
+end note
+@enduml

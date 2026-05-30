@@ -1,0 +1,53 @@
+@startuml
+interface ILogger
+{
+    {abstract} void Init()
+    {abstract} void LogTemperature(float temp)
+    {abstract} void LogPressure(float pressurePa)
+    {abstract} void LogHumidity(float humidity100)
+    {abstract} void LogSpeed(float speed)
+}
+
+class UARTLogger
+{
+    + Init(): void
+    + LogTemperature(float temperature): void
+    + LogPressure(float pressurePa): void
+    + LogHumidity(float humidity): void
+    + LogSpeed(float speed): void
+    - PutChar(char ch): void
+    - PutString(const char* text): void
+}
+
+class UARTFormatter
+{
+    - temp_precision_: int
+    - speed_precision_: int
+    - press_precision_: int
+    - hum_precision_: int
+    + UARTFormatter(int precision_temp, int precision_speed)
+    + FormatTemperature(float, char*): char*
+    + FormatSpeed(float, char*): char*
+    + FormatPressure(float, char*): char*
+    + FormatHumidity(float, char*): char*
+    + SetTemperaturePrecision(int): void
+    + SetSpeedPrecision(int): void
+    - FormatFloat(float value, char* buffer, int precision): char*
+}
+
+class "USART" as USART <<module/static>>
+
+ILogger <|.. UARTLogger
+UARTLogger ..> UARTFormatter : форматирует
+UARTLogger ..> USART : Init(9600), SendChar/SendString
+
+note bottom of UARTLogger
+  Каждый Log* форматирует значение в буфер через UARTFormatter
+  и отправляет строку через USART. Init вызывает USART::Init(9600).
+end note
+
+note bottom of UARTFormatter
+  UARTFormatter.h в партии не было - методы подтверждены
+  по вызовам в UARTLogger.cpp. FormatFloat правлен под давление.
+end note
+@enduml

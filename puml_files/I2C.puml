@@ -1,25 +1,20 @@
 @startuml
-interface II2C
+class "I2C" as I2C <<module>>
 {
-    {abstract} bool WriteByte(addr, reg, data)
-    {abstract} bool ReadBytes(addr, reg, buf, len)
+    + I2C_Init(): void
+    + I2C_Start(): void
+    + I2C_Stop(): void
+    + I2C_WriteByte(uint8_t data): uint8_t
+    + I2C_ReadByte(uint8_t ack): uint8_t
+    + I2C_DelayMs(uint32_t ms): void
+    + I2C_DelayUs(uint32_t us): void
 }
-
-class I2C
-{
-    + WriteByte(addr, reg, data): bool
-    + ReadBytes(addr, reg, buf, len): bool
-}
-
-II2C <|.. I2C
-
-note bottom of II2C
-  Интерфейс для работы с шиной I2C
-end note
 
 note bottom of I2C
-  Реализация I2C для STM32F411RE.
-  Частота 100 кГц, пины PB6 (SCL), PB7 (SDA)
+  AHardware/I2C/I2C.h - набор свободных C-функций (НЕ класс).
+  ПРОГРАММНЫЙ (bit-bang) I2C через GPIOB:
+    PB8 = SCL, PB9 = SDA (BSRR/IDR/MODER напрямую).
+  I2C_WriteByte возвращает ACK от устройства.
+  delay_us калибрована под APB1 = 4 МГц.
 end note
-
 @enduml

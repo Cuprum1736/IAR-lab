@@ -1,0 +1,42 @@
+@startuml
+interface ILedIndicator
+{
+    {abstract} void Init()
+    {abstract} void Update(float speed)
+}
+
+class LEDIndicator
+{
+    + Init(): void
+    + Update(float speed): void
+}
+
+class LedTaskContext <<struct>>
+{
+    + leds: ILedIndicator*
+}
+
+class LedTask
+{
+    + LedTask_Start(ILedIndicator&): void
+    + LedTask_Start(): void
+    - LedTaskFunction(void* param): void
+}
+
+class SharedData <<struct>>
+
+ILedIndicator <|.. LEDIndicator
+LedTaskContext o-- ILedIndicator : leds
+LedTask ..> LedTaskContext
+LedTask ..> SharedData : читает g_data.speed
+
+note bottom of LEDIndicator
+  AHardware/LED/LEDIndicator.h.
+  Реализует ILedIndicator (Init + Update по скорости).
+end note
+
+note bottom of LedTask
+  Период 50 мс. Читает g_data.speed, передаёт в leds->Update.
+  Зависимость внедряется через LedTaskContext (DI).
+end note
+@enduml

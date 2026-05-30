@@ -1,0 +1,197 @@
+@startuml
+title Целевая архитектура (взаимодействие классов)
+
+' ===================== БАЗОВЫЙ ПОТОК ЗАДАЧ =====================
+interface IThread
+{
+    {abstract} void Run()
+}
+
+class MeasureTask
+{
+    + void Run()
+}
+
+class SendTask
+{
+    + void Run()
+}
+
+IThread <|.. MeasureTask
+IThread <|.. SendTask
+
+' ===================== КОНТРОЛЛЕР / ДРАЙВЕР =====================
+interface IMeasurementsController
+{
+    {abstract} void Update()
+}
+
+class BME280
+{
+    + void Init()
+    + void Update()
+}
+
+IMeasurementsController <|.. BME280
+
+' ===================== РЕПОЗИТОРИЙ ДАННЫХ =====================
+interface IBME280Repository
+{
+    {abstract} int GetTemperatureData()
+    {abstract} int SetTemperatureData()
+    {abstract} int GetHumidityData()
+    {abstract} int SetHumidityData()
+    {abstract} int GetPressureData()
+    {abstract} int SetPressureData()
+}
+
+class Repository
+{
+    + int GetTemperatureData()
+    + int SetTemperatureData()
+    + int GetHumidityData()
+    + int SetHumidityData()
+    + int GetPressureData()
+    + int SetPressureData()
+}
+
+IBME280Repository <|.. Repository
+
+' ===================== ОБЩИЕ ИНТЕРФЕЙСЫ ВЕЛИЧИН =====================
+interface IMeasurementsUpdate
+{
+    {abstract} void UpdateCalc()
+}
+
+interface IFloatDataProvider
+{
+    {abstract} float GetFloatData()
+}
+
+interface ITemperature
+{
+    {abstract} float GetTemperature()
+}
+
+interface IHumidity
+{
+    {abstract} float GetHumidity()
+}
+
+interface IPressure
+{
+    {abstract} float GetPressure()
+}
+
+' ===================== РАСЧЁТНЫЕ КЛАССЫ =====================
+class Temperature
+{
+    + void UpdateCalc()
+    + float GetTemperature()
+    + float GetFloatData()
+}
+
+class Humidity
+{
+    + void UpdateCalc()
+    + float GetHumidity()
+    + float GetFloatData()
+}
+
+class Pressure
+{
+    + void UpdateCalc()
+    + float GetPressure()
+    + float GetFloatData()
+}
+
+class CalcDewPoint
+{
+    + void UpdateCalc()
+    + float GetDewPoint()
+    + float GetFloatData()
+}
+
+ITemperature        <|.. Temperature
+IHumidity           <|.. Humidity
+IPressure           <|.. Pressure
+
+IMeasurementsUpdate <|.. Temperature
+IMeasurementsUpdate <|.. Humidity
+IMeasurementsUpdate <|.. Pressure
+IMeasurementsUpdate <|.. CalcDewPoint
+
+IFloatDataProvider  <|.. Temperature
+IFloatDataProvider  <|.. Humidity
+IFloatDataProvider  <|.. Pressure
+IFloatDataProvider  <|.. CalcDewPoint
+
+' ===================== НИЗКИЙ УРОВЕНЬ =====================
+interface II2C
+{
+    {abstract} bool WriteByte(addr, reg, data)
+    {abstract} bool ReadBytes(addr, reg, buf, len)
+}
+
+class I2C
+
+interface ITransfer
+{
+    {abstract} void Send(const std::string& data)
+}
+
+class Usart
+
+interface IFormater
+{
+    {abstract} std::string Format(data)
+}
+
+class Formater
+
+II2C      <|.. I2C
+ITransfer <|.. Usart
+IFormater <|.. Formater
+
+' ===================== СВЯЗИ (агрегации / использование) =====================
+MeasureTask o-- IMeasurementsController : mController
+MeasureTask o-- "4" IMeasurementsUpdate : mUpdates
+
+BME280 o-- II2C             : mI2C
+BME280 o-- IBME280Repository
+
+Temperature o-- IBME280Repository
+Humidity    o-- IBME280Repository
+Pressure    o-- IBME280Repository
+
+CalcDewPoint o-- ITemperature : mTemp
+CalcDewPoint o-- IHumidity    : mHum
+CalcDewPoint o-- IPressure    : mPres
+
+SendTask o-- IFormater                 : mFormater
+SendTask o-- ITransfer                 : mTransfer
+SendTask o-- "1..*" IFloatDataProvider : mDataProviders
+
+' ===================== ЗАМЕТКИ =====================
+note bottom of I2C
+  STM32F411RE, 100 кГц, PB6 (SCL), PB7 (SDA)
+end note
+
+note bottom of Usart
+  USART2, 9600 8N1, Bluetooth HC-06
+end note
+
+note bottom of Formater
+  Форматирует 4 величины в строку по ТЗ:
+  "Давление ... Влажность ... Температура ... Точка росы ..."
+end note
+
+note right of MeasureTask
+  mUpdates[4]:
+  [0] Temperature
+  [1] Humidity
+  [2] Pressure
+  [3] CalcDewPoint  (точка росы - последней,
+                     зависит от первых трёх)
+end note
+@enduml

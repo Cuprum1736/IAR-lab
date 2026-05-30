@@ -1,0 +1,23 @@
+@startuml
+interface IFilter
+{
+    {abstract} float Update(float raw_value)
+}
+
+class LowPassFilter
+{
+    - alpha_: float
+    - filteredValue_: float
+    - isFirstValue_: bool
+    + LowPassFilter(float dt, float rc)
+    + Update(float rawValue): float
+}
+
+IFilter <|.. LowPassFilter
+
+note bottom of LowPassFilter
+  Экспоненциальное сглаживание.
+  alpha_ = 1 - exp(-dt/rc) в конструкторе.
+  Первое значение принимается как есть (isFirstValue_).
+end note
+@enduml

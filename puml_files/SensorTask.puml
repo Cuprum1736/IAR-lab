@@ -1,0 +1,36 @@
+@startuml
+interface ISensor
+interface IFilter
+interface ICalculator
+
+class SensorTaskContext <<struct>>
+{
+    + sensor: ISensor*
+    + filter: IFilter*
+    + calculator: ICalculator*
+}
+
+class SensorTask
+{
+    + SensorTask_Start(ISensor&, IFilter&, ICalculator&): void
+    + SensorTask_Start(): void
+    - SensorTaskFunction(void* param): void
+}
+
+class SharedData <<struct>>
+
+SensorTaskContext o-- ISensor : sensor
+SensorTaskContext o-- IFilter : filter
+SensorTaskContext o-- ICalculator : calculator
+SensorTask ..> SensorTaskContext
+SensorTask ..> SharedData : пишет g_data
+
+note bottom of SensorTask
+  Период 1 секунда. Порядок в цикле:
+  1) ReadTemperature (обновляет tFine_)
+  2) readPressure / readHumidity100 (через тот же объект BME280)
+  3) фильтр температуры + расчёт скорости
+  4) запись в g_data + new_data = true
+  Setpoint = 25.0 (в Calculate игнорируется).
+end note
+@enduml

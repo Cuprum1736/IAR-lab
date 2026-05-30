@@ -1,0 +1,16 @@
+@startuml
+class SharedData <<struct>>
+{
+    + temperature: volatile float
+    + speed: volatile float
+    + humidity100: volatile float
+    + pressurePa: volatile float
+    + new_data: volatile bool
+}
+
+note bottom of SharedData
+  Глобальный g_data. Канал обмена между задачами.
+  Пишет SensorTask, читают DisplayTask / LedTask / UartTask.
+  Доступ под taskENTER_CRITICAL / taskEXIT_CRITICAL.
+end note
+@enduml

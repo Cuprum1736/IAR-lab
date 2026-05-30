@@ -1,0 +1,16 @@
+@startuml
+class "USART" as USART <<module/static>>
+{
+    + {static} Init(uint32_t baudrate): void
+    + {static} SendChar(char c): void
+    + {static} SendString(const char* str): void
+}
+
+note bottom of USART
+  AHardware/UART/USART.h - статический класс.
+  USART2, пины PA2 (TX) / PA3 (RX), AF7.
+  uartdiv = 4000000 / baudrate -> APB1 = 4 МГц.
+  Используется и в main (стартовые сообщения),
+  и в UARTLogger (вывод задачи). К USART2 подключён HC-06.
+end note
+@enduml
